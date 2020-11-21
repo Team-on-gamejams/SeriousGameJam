@@ -30,10 +30,11 @@ public class Level : MonoBehaviour {
 
 		currPatient = Instantiate(patients[currPatientId]);
 
-		dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Вам звонить {currPatient.name}");
-		dialogSelect.AddButton("Пiдняти трубку", () => {
-			NodeLinkData narrativeData = currPatient.dialogue.NodeLinks.First(); //Entrypoint node
-			ProceedToNarrative(narrativeData.TargetNodeGUID);
+		dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Вам звонить {currPatient.name}", onShowLog: ()=> {
+			dialogSelect.AddButton("Пiдняти трубку", () => {
+				NodeLinkData narrativeData = currPatient.dialogue.NodeLinks.First(); //Entrypoint node
+				ProceedToNarrative(narrativeData.TargetNodeGUID);
+			});
 		});
 	}
 
@@ -44,57 +45,59 @@ public class Level : MonoBehaviour {
 
 		PatientData.PatientMoodData mood = currPatient.GetMoodData(nodeData.mood);
 
-		dialogLog.AddToLog(DialogLogUI.LogEntryType.Patient, ProcessProperties(text), currPatient.name, mood.backColor, mood.avatar);
+		dialogLog.AddToLog(DialogLogUI.LogEntryType.Patient, ProcessProperties(text), currPatient.name, mood.backColor, mood.avatar, () => {
+			dialogSelect.Clear();
+			foreach (var choice in choices) {
+				string choiceText = ProcessProperties(choice.PortName);
 
-		dialogSelect.Clear();
-		foreach (var choice in choices) {
-			string choiceText = ProcessProperties(choice.PortName);
+				dialogSelect.AddButton(choiceText, () => {
+					dialogLog.AddToLog(DialogLogUI.LogEntryType.Operator, choiceText, operatorName, onShowLog: () => {
+						switch (mood.mood) {
+							case PatientMood.Exit:
+								EndPatient();
+								break;
 
-			dialogSelect.AddButton(choiceText, ()=> {
-				dialogLog.AddToLog(DialogLogUI.LogEntryType.Operator, choiceText, operatorName);
+							case PatientMood.Normal:
+							case PatientMood.Angry:
+							default:
+								ProceedToNarrative(choice.TargetNodeGUID);
+								break;
+						}
+					});
+				});
+			}
 
-				switch (mood.mood) {
-					case PatientMood.Exit:
-						EndPatient();
-						break;
-
-					case PatientMood.Normal:
-					case PatientMood.Angry:
-					default:
-						ProceedToNarrative(choice.TargetNodeGUID);
-						break;
-				}
-			});
-		}
-
-		string ProcessProperties(string processedText) {
-			foreach (var exposedProperty in currPatient.dialogue.ExposedProperties)
-				processedText = processedText.Replace($"[{exposedProperty.PropertyName}]", exposedProperty.PropertyValue);
-			return processedText;
-		}
-
-		if(mood.mood == PatientMood.Exit) {
-			EndPatient();
-		}
+			if (mood.mood == PatientMood.Exit) {
+				EndPatient();
+			}
+		});
 	}
 
 	void EndPatient() {
 		dialogSelect.Clear();
 
-		dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Розмова закiнчена");
-		dialogSelect.AddButton("Покласти трубку", () => {
-			++currPatientId;
-			if (currPatientId == patients.Length) {
-				dialogLog.ClearLog();
-				dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Ви пройшли гру! Конгарц");
+		++currPatientId;
+		if (currPatientId == patients.Length) {
+			dialogLog.ClearLog();
+			dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Ви пройшли гру! Конгарц", onShowLog: () => {
 				dialogSelect.AddButton("Start again", () => {
 					currPatientId = 0;
 					StartNewPatient();
 				});
-			}
-			else {
-				StartNewPatient();
-			}
-		});
+			});
+		}
+		else {
+			dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Розмова закiнчена", onShowLog: ()=> {
+				dialogSelect.AddButton("Покласти трубку", () => {
+					StartNewPatient();
+				});
+			});
+		}
+	}
+
+	string ProcessProperties(string processedText) {
+		foreach (var exposedProperty in currPatient.dialogue.ExposedProperties)
+			processedText = processedText.Replace($"[{exposedProperty.PropertyName}]", exposedProperty.PropertyValue);
+		return processedText;
 	}
 }
