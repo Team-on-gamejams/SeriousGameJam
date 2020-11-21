@@ -13,7 +13,7 @@ public static class NewObjectBottomOfHierarchy
     {
         if(Event.current.type == EventType.DragExited)
         {
-            if(Selection.gameObjects.Length > 0)
+            if(Selection.gameObjects != null && Selection.gameObjects.Length > 0 && Selection.gameObjects[0] != null)
             {
                 // this checks out because it's only possible to drag and drop a single prefab to the scene at a time!
                 Selection.gameObjects[0].transform.SetAsLastSibling();
