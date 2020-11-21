@@ -9,6 +9,7 @@ using Subtegral.DialogueSystem.DataContainers;
 
 public class Level : MonoBehaviour {
 	[Header("Data"), Space]
+	string operatorName = "Operator";
 	[SerializeField] PatientData[] patients;
 
 	[Header("Refs"), Space]
@@ -28,26 +29,29 @@ public class Level : MonoBehaviour {
 		dialogSelect.Clear();
 
 		currPatient = Instantiate(patients[currPatientId]);
-		
-		NodeLinkData narrativeData = currPatient.dialogue.NodeLinks.First(); //Entrypoint node
-		ProceedToNarrative(narrativeData.TargetNodeGUID);
+
+		dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Вам звонить {currPatient.name}");
+		dialogSelect.AddButton("Пiдняти трубку", () => {
+			NodeLinkData narrativeData = currPatient.dialogue.NodeLinks.First(); //Entrypoint node
+			ProceedToNarrative(narrativeData.TargetNodeGUID);
+		});
 	}
 
-	private void ProceedToNarrative(string narrativeDataGUID) {
+	void ProceedToNarrative(string narrativeDataGUID) {
 		DialogueNodeData nodeData = currPatient.dialogue.DialogueNodeData.Find(x => x.NodeGUID == narrativeDataGUID);
 		string text = nodeData.DialogueText;
 		List<NodeLinkData> choices = currPatient.dialogue.NodeLinks.Where(x => x.BaseNodeGUID == narrativeDataGUID).ToList();
 
 		PatientData.PatientMoodData mood = currPatient.GetMoodData(nodeData.mood);
 
-		dialogLog.AddToLog(false, currPatient.name, ProcessProperties(text), mood.backColor, mood.avatar);
+		dialogLog.AddToLog(DialogLogUI.LogEntryType.Patient, ProcessProperties(text), currPatient.name, mood.backColor, mood.avatar);
 
 		dialogSelect.Clear();
 		foreach (var choice in choices) {
 			string choiceText = ProcessProperties(choice.PortName);
 
 			dialogSelect.AddButton(choiceText, ()=> {
-				dialogLog.AddToLog(true, "Operator", choiceText);
+				dialogLog.AddToLog(DialogLogUI.LogEntryType.Operator, choiceText, operatorName);
 
 				switch (mood.mood) {
 					case PatientMood.Exit:
@@ -77,11 +81,12 @@ public class Level : MonoBehaviour {
 	void EndPatient() {
 		dialogSelect.Clear();
 
-		LeanTween.delayedCall(1.0f, () => {
+		dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Розмова закiнчена");
+		dialogSelect.AddButton("Покласти трубку", () => {
 			++currPatientId;
 			if (currPatientId == patients.Length) {
 				dialogLog.ClearLog();
-				dialogLog.AddToLog(true, "Operator", "You win");
+				dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Ви пройшли гру! Конгарц");
 				dialogSelect.AddButton("Start again", () => {
 					currPatientId = 0;
 					StartNewPatient();

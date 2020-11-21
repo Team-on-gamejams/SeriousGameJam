@@ -4,12 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogLogUI : MonoBehaviour {
+	public enum LogEntryType : byte { Patient, Operator, Servise }
+
 	[Header("Style"), Space]
 	[SerializeField] Color operatorColor;
+	[SerializeField] Color serviceColor;
 
 	[Header("Prefabs"), Space]
 	[SerializeField] GameObject operatorLogPrefab;
 	[SerializeField] GameObject patientLogPrefab;
+	[SerializeField] GameObject serviceLogPrefab;
 
 	[Header("Refs"), Space]
 	[SerializeField] VerticalLayoutGroup layoutGroup;
@@ -17,11 +21,30 @@ public class DialogLogUI : MonoBehaviour {
 
 	List<DialogLogEntry> entries = new List<DialogLogEntry>();
 
-	public void AddToLog(bool isOperator, string name, string text, Color backColor = default, Sprite avatar = null) {
-		GameObject entryGO = Instantiate(isOperator ? operatorLogPrefab : patientLogPrefab, layoutGroup.transform);
+	public void AddToLog(LogEntryType type, string text, string name = "", Color backColor = default, Sprite avatar = null) {
+		GameObject entryGO;
+		Color c;
+
+		switch (type) {
+			case LogEntryType.Operator:
+				entryGO = Instantiate(operatorLogPrefab, layoutGroup.transform);
+				c = operatorColor;
+				break;
+			case LogEntryType.Servise:
+				entryGO = Instantiate(serviceLogPrefab, layoutGroup.transform);
+				c = serviceColor;
+				break;
+
+			case LogEntryType.Patient:
+			default:
+				entryGO = Instantiate(patientLogPrefab, layoutGroup.transform);
+				c = backColor;
+				break;
+		}
+
 		DialogLogEntry entry = entryGO.GetComponent<DialogLogEntry>();
 
-		entry.Init(name, text, avatar, isOperator ? operatorColor : backColor);
+		entry.Init(name, text, avatar,c);
 
 		entries.Add(entry);
 
@@ -34,9 +57,17 @@ public class DialogLogUI : MonoBehaviour {
 		entries.Clear();
 	}
 
+	public void OnLogScroll() {
+		//LeanTween.cancel(scroll.gameObject, false);
+	}
+
 	IEnumerator ScrollToBottom() {
 		yield return null;
 		yield return null;
-		scroll.normalizedPosition = new Vector2(0, 0);
+		LeanTween.value(scroll.gameObject, scroll.normalizedPosition, Vector2.zero, 0.5f)
+		.setEase(LeanTweenType.easeOutCirc)
+		.setOnUpdate((Vector2 pos) => {
+			scroll.normalizedPosition = pos;
+		});
 	}
 }

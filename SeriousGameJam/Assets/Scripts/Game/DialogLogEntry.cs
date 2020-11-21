@@ -12,7 +12,8 @@ public class DialogLogEntry : MonoBehaviour {
 	[SerializeField] Image back;
 
 	public void Init(string name, string text, Sprite _avatar, Color backColor) {
-		nameTextField.text = name;
+		if(!string.IsNullOrEmpty(name) && nameTextField)
+			nameTextField.text = name;
 
 		textTextField.text = text;
 
