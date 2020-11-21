@@ -29,13 +29,13 @@ public class DialogLogUI : MonoBehaviour {
 	List<DialogLogEntry> entries = new List<DialogLogEntry>();
 	PatientTypingEntry patientTyping;
 
-	public void AddToLog(LogEntryType type, string text, string name = "", Color backColor = default, Sprite avatar = null, Action onShowLog = null) {
+	public void AddToLog(LogEntryType type, string text, string name = "", Color backColor = default, Sprite avatar = null, Action onShowLog = null, float minTimeToCallShow = 0.0f) {
 		if (type == LogEntryType.Patient) {
 			GameObject typingGO = Instantiate(patientTypingPrefab, layoutGroup.transform);
 			patientTyping = typingGO.GetComponent<PatientTypingEntry>();
 			patientTyping.Init(backColor);
 
-			StartCoroutine(ScrollToBottom(null));
+			StartCoroutine(ScrollToBottom(null, 0.0f));
 
 			float delay = dotsAnimLenghtRange.GetRandomValueFloat();
 			LeanTween.delayedCall(delay, ()=> {
@@ -74,7 +74,7 @@ public class DialogLogUI : MonoBehaviour {
 
 			entries.Add(entry);
 
-			StartCoroutine(ScrollToBottom(onShowLog));
+			StartCoroutine(ScrollToBottom(onShowLog, minTimeToCallShow));
 		}
 	}
 
@@ -88,12 +88,16 @@ public class DialogLogUI : MonoBehaviour {
 		//LeanTween.cancel(scroll.gameObject, false);
 	}
 
-	IEnumerator ScrollToBottom(Action onEnd) {
+	IEnumerator ScrollToBottom(Action onEnd, float minTime) {
+		LeanTween.cancel(scroll.gameObject, true);
+		
 		yield return null;
 		yield return null;
 
-		if(scroll.normalizedPosition == Vector2.zero) {
-			onEnd?.Invoke();
+		if (scroll.normalizedPosition == Vector2.zero) {
+			LeanTween.delayedCall(minTime, () => {
+				onEnd?.Invoke();
+			});
 		}
 		else {
 			LeanTween.value(scroll.gameObject, scroll.normalizedPosition, Vector2.zero, 0.5f)

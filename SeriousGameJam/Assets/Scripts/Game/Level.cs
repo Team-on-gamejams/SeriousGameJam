@@ -32,6 +32,7 @@ public class Level : MonoBehaviour {
 
 		dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Вам звонить {currPatient.name}", onShowLog: ()=> {
 			dialogSelect.AddButton("Пiдняти трубку", () => {
+				dialogSelect.Clear();
 				NodeLinkData narrativeData = currPatient.dialogue.NodeLinks.First(); //Entrypoint node
 				ProceedToNarrative(narrativeData.TargetNodeGUID);
 			});
@@ -46,12 +47,12 @@ public class Level : MonoBehaviour {
 		PatientData.PatientMoodData mood = currPatient.GetMoodData(nodeData.mood);
 
 		dialogLog.AddToLog(DialogLogUI.LogEntryType.Patient, ProcessProperties(text), currPatient.name, mood.backColor, mood.avatar, () => {
-			dialogSelect.Clear();
 			foreach (var choice in choices) {
 				string choiceText = ProcessProperties(choice.PortName);
 
 				dialogSelect.AddButton(choiceText, () => {
-					dialogLog.AddToLog(DialogLogUI.LogEntryType.Operator, choiceText, operatorName, onShowLog: () => {
+					dialogSelect.Clear();
+					dialogLog.AddToLog(DialogLogUI.LogEntryType.Operator, choiceText, operatorName, minTimeToCallShow: 0.5f, onShowLog: () => {
 						switch (mood.mood) {
 							case PatientMood.Exit:
 								EndPatient();
