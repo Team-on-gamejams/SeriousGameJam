@@ -3273,7 +3273,7 @@ PrefabInstance:
     - target: {fileID: 5276672864813567012, guid: e6a13db171acf2d499189c705ccf90f9,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 527.6963
+      value: 487.6963
       objectReference: {fileID: 0}
     - target: {fileID: 5276672864813567012, guid: e6a13db171acf2d499189c705ccf90f9,
         type: 3}
@@ -3405,7 +3405,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 321947205}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.70452493
+  m_Size: 0.67295176
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5648,6 +5648,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 286834220}
     m_Modifications:
+    - target: {fileID: 2936434758944214, guid: 797162d4b79f9a147b58ae4c924f4def, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -16.599976
+      objectReference: {fileID: 0}
     - target: {fileID: 1766997562000674398, guid: 797162d4b79f9a147b58ae4c924f4def,
         type: 3}
       propertyPath: m_padding
@@ -7079,12 +7083,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
+    m_Left: 20
+    m_Right: 20
+    m_Top: 20
+    m_Bottom: 20
   m_ChildAlignment: 1
-  m_Spacing: 10
+  m_Spacing: 20
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
@@ -8009,7 +8013,7 @@ PrefabInstance:
     - target: {fileID: 5276672864813567012, guid: e6a13db171acf2d499189c705ccf90f9,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 527.6963
+      value: 487.6963
       objectReference: {fileID: 0}
     - target: {fileID: 5276672864813567012, guid: e6a13db171acf2d499189c705ccf90f9,
         type: 3}
@@ -8855,7 +8859,7 @@ PrefabInstance:
     - target: {fileID: 5276672864813567012, guid: e6a13db171acf2d499189c705ccf90f9,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 527.6963
+      value: 487.6963
       objectReference: {fileID: 0}
     - target: {fileID: 5276672864813567012, guid: e6a13db171acf2d499189c705ccf90f9,
         type: 3}
