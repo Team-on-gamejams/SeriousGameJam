@@ -14,16 +14,8 @@ public class Level : MonoBehaviour {
 	int currPatientId = 0;
 	PatientData currPatient;
 
-	private void Awake() {
-		dialogSelect.OnAnyButtonPress += OnAnyButtonPress;
-	}
-
 	void Start() {
 		StartNewPatient();
-	}
-
-	private void OnDestroy() {
-		dialogSelect.OnAnyButtonPress -= OnAnyButtonPress;
 	}
 
 	void StartNewPatient() {
@@ -41,22 +33,26 @@ public class Level : MonoBehaviour {
 		dialogLog.AddToLog(true, "Operator", "Gonna make you <b>angry</b>");
 		
 		currPatient.mood = PatientData.PatientMood.Angry;
+
+		OnAnyButtonPress();
 	}
 
 	void MakeNormal() {
 		dialogLog.AddToLog(true, "Operator", "Gonna make you <b>normal</b>");
 		
 		currPatient.mood = PatientData.PatientMood.Normal;
+
+		OnAnyButtonPress();
 	}
 
 	void EndPatient() {
+		dialogSelect.Clear();
 		dialogLog.AddToLog(true, "Operator", "END");
-		
+
 		LeanTween.delayedCall(1.0f, () => {
 			++currPatientId;
 			if(currPatientId == patients.Length) {
 				dialogLog.ClearLog();
-				dialogSelect.Clear();
 				dialogLog.AddToLog(true, "Operator", "You win");
 			}
 			else {

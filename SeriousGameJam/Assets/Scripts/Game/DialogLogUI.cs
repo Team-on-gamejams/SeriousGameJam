@@ -10,6 +10,7 @@ public class DialogLogUI : MonoBehaviour {
 
 	[Header("Refs"), Space]
 	[SerializeField] VerticalLayoutGroup layoutGroup;
+	[SerializeField] ScrollRect scroll;
 
 	List<DialogLogEntry> entries = new List<DialogLogEntry>();
 
@@ -20,11 +21,18 @@ public class DialogLogUI : MonoBehaviour {
 		entry.Init(name, text, avatar);
 
 		entries.Add(entry);
+
+		StartCoroutine(ScrollToBottom());
 	}
 
 	public void ClearLog() {
 		foreach (Transform child in layoutGroup.transform)
 			Destroy(child.gameObject);
 		entries.Clear();
+	}
+
+	IEnumerator ScrollToBottom() {
+		yield return null;
+		scroll.normalizedPosition = new Vector2(0, 0);
 	}
 }

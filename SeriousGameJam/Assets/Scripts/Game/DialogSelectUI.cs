@@ -5,8 +5,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogSelectUI : MonoBehaviour {
-	public Action OnAnyButtonPress;
-
 	[Header("Prefabs"), Space]
 	[SerializeField] GameObject buttonPrefab;
 
@@ -19,7 +17,7 @@ public class DialogSelectUI : MonoBehaviour {
 		GameObject buttonGO = Instantiate(buttonPrefab, layoutGroup.transform);
 		DialogSelectButton button = buttonGO.GetComponent<DialogSelectButton>();
 
-		button.Init(buttons.Count + 1, text, onClick, OnAnyButtonPress);
+		button.Init(buttons.Count + 1, text, onClick);
 
 		buttons.Add(button);
 	}
