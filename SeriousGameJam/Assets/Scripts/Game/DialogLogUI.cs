@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogLogUI : MonoBehaviour {
+	[Header("Style"), Space]
+	[SerializeField] Color operatorColor;
+
 	[Header("Prefabs"), Space]
 	[SerializeField] GameObject operatorLogPrefab;
 	[SerializeField] GameObject patientLogPrefab;
@@ -14,11 +17,11 @@ public class DialogLogUI : MonoBehaviour {
 
 	List<DialogLogEntry> entries = new List<DialogLogEntry>();
 
-	public void AddToLog(bool isOperator, string name, string text, Sprite avatar = null) {
+	public void AddToLog(bool isOperator, string name, string text, Color backColor = default, Sprite avatar = null) {
 		GameObject entryGO = Instantiate(isOperator ? operatorLogPrefab : patientLogPrefab, layoutGroup.transform);
 		DialogLogEntry entry = entryGO.GetComponent<DialogLogEntry>();
 
-		entry.Init(name, text, avatar);
+		entry.Init(name, text, avatar, isOperator ? operatorColor : backColor);
 
 		entries.Add(entry);
 

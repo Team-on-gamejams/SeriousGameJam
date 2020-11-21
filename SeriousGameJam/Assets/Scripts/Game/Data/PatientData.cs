@@ -30,6 +30,9 @@ public class PatientData : ScriptableObject {
 				if(moodData[i].avatar == null) {
 					moodData[i].avatar = moodData[0].avatar;
 				}
+				if (moodData[i].backColor == Color.clear) {
+					moodData[i].backColor = moodData[0].backColor;
+				}
 				return moodData[i];
 			}
 		}
@@ -41,5 +44,6 @@ public class PatientData : ScriptableObject {
 	public struct PatientMoodData{
 		public PatientMood mood;
 		public Sprite avatar;
+		public Color backColor;
 	}
 }

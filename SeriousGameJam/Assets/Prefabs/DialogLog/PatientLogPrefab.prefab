@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 7219280618416051320}
   - component: {fileID: 4763209457192158205}
   m_Layer: 5
-  m_Name: LogPrefab
+  m_Name: PatientLogPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,6 +138,7 @@ MonoBehaviour:
   nameTextField: {fileID: 6905352978245749739}
   textTextField: {fileID: 4763209458059848005}
   avatar: {fileID: 4763209456758138191}
+  back: {fileID: 4763209457192158205}
 --- !u!114 &4763209457192158205
 MonoBehaviour:
   m_ObjectHideFlags: 0

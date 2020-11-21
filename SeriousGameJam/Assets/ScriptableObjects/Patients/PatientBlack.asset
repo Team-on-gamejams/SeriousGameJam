@@ -15,9 +15,12 @@ MonoBehaviour:
   moodData:
   - mood: 0
     avatar: {fileID: 21300000, guid: cc64cf8740cc2f949b85b23a3d6016fb, type: 3}
+    backColor: {r: 0.11509442, g: 0.4811321, b: 0, a: 1}
   - mood: 1
     avatar: {fileID: 21300000, guid: 104b1e0c983f16b48b1fdfea59021270, type: 3}
+    backColor: {r: 0.48235294, g: 0.17721178, b: 0, a: 1}
   - mood: 250
     avatar: {fileID: 0}
+    backColor: {r: 0, g: 0, b: 0, a: 0}
   name: Black
   dialogue: {fileID: 11400000, guid: 7988ca20036ada5498bf5c0125057b8b, type: 2}

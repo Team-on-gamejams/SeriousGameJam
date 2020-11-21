@@ -40,7 +40,7 @@ public class Level : MonoBehaviour {
 
 		PatientData.PatientMoodData mood = currPatient.GetMoodData(nodeData.mood);
 
-		dialogLog.AddToLog(false, currPatient.name, ProcessProperties(text), mood.avatar);
+		dialogLog.AddToLog(false, currPatient.name, ProcessProperties(text), mood.backColor, mood.avatar);
 
 		dialogSelect.Clear();
 		foreach (var choice in choices) {

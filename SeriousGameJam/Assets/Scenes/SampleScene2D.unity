@@ -4515,6 +4515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b37ce55b33f6e42b7fa173067d354a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  operatorColor: {r: 0.061671842, g: 0, b: 0.48235294, a: 1}
   operatorLogPrefab: {fileID: 4763209457192158207, guid: 85347a772aadcb04abe1ee30e125e807,
     type: 3}
   patientLogPrefab: {fileID: 4763209457192158207, guid: f7f3ee12c497975408bebe1141bf0d20,
