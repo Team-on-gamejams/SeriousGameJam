@@ -129,7 +129,7 @@ namespace Subtegral.DialogueSystem.Editor
             {
                 title = nodeName,
                 DialogueText = nodeName,
-                mood = "normal",
+                mood = mood,
                 GUID = Guid.NewGuid().ToString()
             };
             tempDialogueNode.styleSheets.Add(Resources.Load<StyleSheet>("Node"));
@@ -160,6 +160,7 @@ namespace Subtegral.DialogueSystem.Editor
             moodField.RegisterValueChangedCallback(evt => {
                 tempDialogueNode.mood = evt.newValue;
             });
+            moodField.SetValueWithoutNotify(tempDialogueNode.mood);
             tempDialogueNode.mainContainer.Add(moodField);
 
             return tempDialogueNode;

@@ -1,6 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using Subtegral.DialogueSystem.DataContainers;
 
 public class Level : MonoBehaviour {
 	[Header("Data"), Space]
@@ -23,53 +28,68 @@ public class Level : MonoBehaviour {
 		dialogSelect.Clear();
 
 		currPatient = Instantiate(patients[currPatientId]);
-
-		PatientData.PatientMoodData mood = currPatient.GetCurrentMoodData();
-		dialogLog.AddToLog(false, currPatient.name, "Hi!", mood.avatar);
-		FillSelectDialog();
+		
+		NodeLinkData narrativeData = currPatient.dialogue.NodeLinks.First(); //Entrypoint node
+		ProceedToNarrative(narrativeData.TargetNodeGUID);
 	}
 
-	void MakeAngry() {
-		dialogLog.AddToLog(true, "Operator", "Gonna make you <b>angry</b>");
-		
-		OnAnyButtonPress();
-	}
+	private void ProceedToNarrative(string narrativeDataGUID) {
+		DialogueNodeData nodeData = currPatient.dialogue.DialogueNodeData.Find(x => x.NodeGUID == narrativeDataGUID);
+		string text = nodeData.DialogueText;
+		List<NodeLinkData> choices = currPatient.dialogue.NodeLinks.Where(x => x.BaseNodeGUID == narrativeDataGUID).ToList();
 
-	void MakeNormal() {
-		dialogLog.AddToLog(true, "Operator", "Gonna make you <b>normal</b>");
-		
-		OnAnyButtonPress();
+		PatientData.PatientMoodData mood = currPatient.GetMoodData(nodeData.mood);
+
+		dialogLog.AddToLog(false, currPatient.name, ProcessProperties(text), mood.avatar);
+
+		dialogSelect.Clear();
+		foreach (var choice in choices) {
+			string choiceText = ProcessProperties(choice.PortName);
+
+			dialogSelect.AddButton(choiceText, ()=> {
+				dialogLog.AddToLog(true, "Operator", choiceText);
+
+				switch (mood.mood) {
+					case PatientMood.Exit:
+						EndPatient();
+						break;
+
+					case PatientMood.Normal:
+					case PatientMood.Angry:
+					default:
+						ProceedToNarrative(choice.TargetNodeGUID);
+						break;
+				}
+			});
+		}
+
+		string ProcessProperties(string processedText) {
+			foreach (var exposedProperty in currPatient.dialogue.ExposedProperties)
+				processedText = processedText.Replace($"[{exposedProperty.PropertyName}]", exposedProperty.PropertyValue);
+			return processedText;
+		}
+
+		if(mood.mood == PatientMood.Exit) {
+			EndPatient();
+		}
 	}
 
 	void EndPatient() {
 		dialogSelect.Clear();
-		dialogLog.AddToLog(true, "Operator", "END");
 
 		LeanTween.delayedCall(1.0f, () => {
 			++currPatientId;
-			if(currPatientId == patients.Length) {
+			if (currPatientId == patients.Length) {
 				dialogLog.ClearLog();
 				dialogLog.AddToLog(true, "Operator", "You win");
+				dialogSelect.AddButton("Start again", () => {
+					currPatientId = 0;
+					StartNewPatient();
+				});
 			}
 			else {
 				StartNewPatient();
 			}
 		});
-	}
-
-	void OnAnyButtonPress() {
-		dialogSelect.Clear();
-
-		PatientData.PatientMoodData mood = currPatient.GetCurrentMoodData();
-
-		dialogLog.AddToLog(false, currPatient.name, "Text", mood.avatar);
-
-		FillSelectDialog();
-	}
-
-	void FillSelectDialog() {
-		dialogSelect.AddButton("Make angry", MakeAngry);
-		dialogSelect.AddButton("Make normal", MakeNormal);
-		dialogSelect.AddButton("Start new patient", EndPatient);
 	}
 }

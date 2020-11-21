@@ -20,10 +20,10 @@ MonoBehaviour:
     PortName: Exit
     TargetNodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
   - BaseNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
-    PortName: Say hey
+    PortName: Be normal
     TargetNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
   - BaseNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
-    PortName: Say test
+    PortName: Be angry
     TargetNodeGUID: b5cc8987-6cbc-4753-87dd-a6a392a785f0
   - BaseNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
     PortName: Exit
@@ -33,20 +33,20 @@ MonoBehaviour:
     TargetNodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
   DialogueNodeData:
   - NodeGUID: b5cc8987-6cbc-4753-87dd-a6a392a785f0
-    DialogueText: Test
-    mood: normal
+    DialogueText: I am angry
+    mood: angry
     Position: {x: 574, y: 171}
   - NodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
-    DialogueText: Exit
+    DialogueText: Hi! I need help!
     mood: normal
     Position: {x: 269, y: 197}
   - NodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
     DialogueText: goodbye
-    mood: normal
+    mood: exit
     Position: {x: 943, y: 247}
   - NodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
-    DialogueText: Hey
-    mood: angry
+    DialogueText: I am normal
+    mood: normal
     Position: {x: 573, y: 44}
   ExposedProperties: []
   CommentBlockData: []

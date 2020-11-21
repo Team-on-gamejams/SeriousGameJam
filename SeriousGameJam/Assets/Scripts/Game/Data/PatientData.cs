@@ -8,23 +8,32 @@ using Subtegral.DialogueSystem.DataContainers;
 public class PatientData : ScriptableObject {
 	[SerializeField] PatientMoodData[] moodData;
 	[Space]
-	PatientMood mood = PatientMood.Normal;
 	public string name;
 	public DialogueContainer dialogue;
+	PatientMood mood = PatientMood.Normal;
 
-	public PatientMoodData GetCurrentMoodData() {
-		switch ("ANGRY".ToLower().Trim()) {
+	public PatientMoodData GetMoodData(string str) {
+		switch (str.ToLower().Trim()) {
 			case "normal":
 				mood = PatientMood.Normal;
 				break;
 			case "angry":
-				mood = PatientMood.Normal;
+				mood = PatientMood.Angry;
+				break;
+			case "exit":
+				mood = PatientMood.Exit;
 				break;
 		}
 
-		foreach (var data in moodData)
-			if (data.mood == mood)
-				return data;
+		for(int i = 0; i < moodData.Length; ++i) {
+			if (moodData[i].mood == mood) {
+				if(moodData[i].avatar == null) {
+					moodData[i].avatar = moodData[0].avatar;
+				}
+				return moodData[i];
+			}
+		}
+			
 		return moodData[0];
 	}
 

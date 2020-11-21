@@ -5,4 +5,8 @@ using UnityEngine;
 public enum PatientMood : byte {
 	Normal = 0,
 	Angry = 1,
+
+
+
+	Exit = 250,
 }
