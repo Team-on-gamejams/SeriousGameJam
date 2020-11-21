@@ -35,14 +35,28 @@ namespace Subtegral.DialogueSystem.Editor
         public void SaveGraph(string fileName)
         {
             var dialogueContainerObject = ScriptableObject.CreateInstance<DialogueContainer>();
-            if (!SaveNodes(fileName, dialogueContainerObject)) return;
+            if (!SaveNodes(fileName, dialogueContainerObject))
+                return;
             SaveExposedProperties(dialogueContainerObject);
             SaveCommentBlocks(dialogueContainerObject);
 
             if (!AssetDatabase.IsValidFolder("Assets/Resources"))
                 AssetDatabase.CreateFolder("Assets", "Resources");
 
-            AssetDatabase.CreateAsset(dialogueContainerObject, $"Assets/Resources/{fileName}.asset");
+            UnityEngine.Object loadedAsset = AssetDatabase.LoadAssetAtPath($"Assets/Resources/{fileName}.asset", typeof(DialogueContainer));
+
+            if (loadedAsset == null || !AssetDatabase.Contains(loadedAsset)) {
+                AssetDatabase.CreateAsset(dialogueContainerObject, $"Assets/Resources/{fileName}.asset");
+            }
+            else {
+                DialogueContainer container = loadedAsset as DialogueContainer;
+                container.NodeLinks = dialogueContainerObject.NodeLinks;
+                container.DialogueNodeData = dialogueContainerObject.DialogueNodeData;
+                container.ExposedProperties = dialogueContainerObject.ExposedProperties;
+                container.CommentBlockData = dialogueContainerObject.CommentBlockData;
+
+            }
+
             AssetDatabase.SaveAssets();
         }
 
