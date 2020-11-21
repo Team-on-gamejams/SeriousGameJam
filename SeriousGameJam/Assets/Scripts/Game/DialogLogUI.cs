@@ -36,6 +36,7 @@ public class DialogLogUI : MonoBehaviour {
 
 	IEnumerator ScrollToBottom() {
 		yield return null;
+		yield return null;
 		scroll.normalizedPosition = new Vector2(0, 0);
 	}
 }
