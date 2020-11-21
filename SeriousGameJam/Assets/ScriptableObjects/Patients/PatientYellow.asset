@@ -18,3 +18,4 @@ MonoBehaviour:
   - mood: 1
     avatar: {fileID: 21300000, guid: 4e20842c03979df43a2e00ad45cfa989, type: 3}
   name: Yellow
+  dialogue: {fileID: 11400000, guid: 193df3460c2ebc047b74c510041999db, type: 2}

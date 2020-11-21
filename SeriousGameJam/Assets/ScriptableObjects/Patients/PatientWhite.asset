@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1075b2fe5184bf5448d35c3fd9bfdafa, type: 3}
   m_Name: PatientWhite
   m_EditorClassIdentifier: 
-  startMood: 1
   moodData:
   - mood: 0
     avatar: {fileID: 21300000, guid: ba1d25486db643c4db1444eb8a02ef6a, type: 3}
   - mood: 1
     avatar: {fileID: 21300000, guid: 4155dd780f8eb2d41954a3f697c5d496, type: 3}
   name: White
+  dialogue: {fileID: 11400000, guid: 2a529dd52b2fefb42a238a2389df72c7, type: 2}

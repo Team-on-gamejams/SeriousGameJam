@@ -64,12 +64,14 @@ namespace Subtegral.DialogueSystem.Editor
 
             foreach (var node in Nodes.Where(node => !node.EntyPoint))
             {
-                dialogueContainerObject.DialogueNodeData.Add(new DialogueNodeData
-                {
+                DialogueNodeData data = new DialogueNodeData {
                     NodeGUID = node.GUID,
                     DialogueText = node.DialogueText,
+                    mood = node.mood,
                     Position = node.GetPosition().position
-                });
+                };		
+
+				dialogueContainerObject.DialogueNodeData.Add(data);
             }
 
             return true;
@@ -135,7 +137,7 @@ namespace Subtegral.DialogueSystem.Editor
         {
             foreach (var perNode in _dialogueContainer.DialogueNodeData)
             {
-                var tempNode = _graphView.CreateNode(perNode.DialogueText, Vector2.zero);
+                var tempNode = _graphView.CreateNode(perNode.DialogueText, perNode.mood, Vector2.zero);
                 tempNode.GUID = perNode.NodeGUID;
                 _graphView.AddElement(tempNode);
 

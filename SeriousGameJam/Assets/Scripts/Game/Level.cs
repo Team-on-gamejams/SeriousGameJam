@@ -32,16 +32,12 @@ public class Level : MonoBehaviour {
 	void MakeAngry() {
 		dialogLog.AddToLog(true, "Operator", "Gonna make you <b>angry</b>");
 		
-		currPatient.mood = PatientData.PatientMood.Angry;
-
 		OnAnyButtonPress();
 	}
 
 	void MakeNormal() {
 		dialogLog.AddToLog(true, "Operator", "Gonna make you <b>normal</b>");
 		
-		currPatient.mood = PatientData.PatientMood.Normal;
-
 		OnAnyButtonPress();
 	}
 

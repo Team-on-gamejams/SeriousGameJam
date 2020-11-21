@@ -8,6 +8,7 @@ namespace Subtegral.DialogueSystem.DataContainers
     {
         public string NodeGUID;
         public string DialogueText;
+        public string mood;
         public Vector2 Position;
     }
 }

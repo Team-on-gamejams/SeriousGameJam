@@ -18,3 +18,4 @@ MonoBehaviour:
   - mood: 1
     avatar: {fileID: 21300000, guid: 104b1e0c983f16b48b1fdfea59021270, type: 3}
   name: Black
+  dialogue: {fileID: 11400000, guid: d47c686f8978ac9428db397fb3d5f01c, type: 2}

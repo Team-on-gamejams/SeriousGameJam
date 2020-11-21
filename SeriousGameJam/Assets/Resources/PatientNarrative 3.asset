@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b3fd9154634ebdb8c8a48960b9a16a, type: 3}
+  m_Name: PatientNarrative 3
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - BaseNodeGUID: 8430c174-fdd7-45db-ba92-3d295e4285e7
+    PortName: Next
+    TargetNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
+  - BaseNodeGUID: b5cc8987-6cbc-4753-87dd-a6a392a785f0
+    PortName: Exit
+    TargetNodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
+  - BaseNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
+    PortName: Say hey
+    TargetNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
+  - BaseNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
+    PortName: Say test
+    TargetNodeGUID: b5cc8987-6cbc-4753-87dd-a6a392a785f0
+  - BaseNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
+    PortName: Exit
+    TargetNodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
+  - BaseNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
+    PortName: Exit
+    TargetNodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
+  DialogueNodeData:
+  - NodeGUID: b5cc8987-6cbc-4753-87dd-a6a392a785f0
+    DialogueText: Test
+    mood: normal
+    Position: {x: 574, y: 171}
+  - NodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
+    DialogueText: Exit
+    mood: normal
+    Position: {x: 269, y: 197}
+  - NodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
+    DialogueText: goodbye
+    mood: normal
+    Position: {x: 943, y: 247}
+  - NodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
+    DialogueText: Hey
+    mood: angry
+    Position: {x: 573, y: 44}
+  ExposedProperties: []
+  CommentBlockData: []

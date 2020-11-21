@@ -120,15 +120,16 @@ namespace Subtegral.DialogueSystem.Editor
 
         public void CreateNewDialogueNode(string nodeName, Vector2 position)
         {
-            AddElement(CreateNode(nodeName, position));
+            AddElement(CreateNode(nodeName, "normal", position));
         }
 
-        public DialogueNode CreateNode(string nodeName, Vector2 position)
+        public DialogueNode CreateNode(string nodeName, string mood, Vector2 position)
         {
             var tempDialogueNode = new DialogueNode()
             {
                 title = nodeName,
                 DialogueText = nodeName,
+                mood = "normal",
                 GUID = Guid.NewGuid().ToString()
             };
             tempDialogueNode.styleSheets.Add(Resources.Load<StyleSheet>("Node"));
@@ -154,6 +155,13 @@ namespace Subtegral.DialogueSystem.Editor
                 text = "Add Choice"
             };
             tempDialogueNode.titleButtonContainer.Add(button);
+
+            var moodField = new TextField("");
+            moodField.RegisterValueChangedCallback(evt => {
+                tempDialogueNode.mood = evt.newValue;
+            });
+            tempDialogueNode.mainContainer.Add(moodField);
+
             return tempDialogueNode;
         }
 
