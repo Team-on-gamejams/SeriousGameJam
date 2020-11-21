@@ -21,6 +21,8 @@ public class Level : MonoBehaviour {
 	PatientData currPatient;
 
 	void Start() {
+		dialogSelect.ClearForce();
+
 		StartNewPatient();
 	}
 

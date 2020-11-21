@@ -25,6 +25,7 @@ public class DialogLogUI : MonoBehaviour {
 	[Header("Refs"), Space]
 	[SerializeField] VerticalLayoutGroup layoutGroup;
 	[SerializeField] ScrollRect scroll;
+	[SerializeField] ContentSizeFitter contentSizeFitter;
 
 	List<DialogLogEntry> entries = new List<DialogLogEntry>();
 	PatientTypingEntry patientTyping;
@@ -68,6 +69,12 @@ public class DialogLogUI : MonoBehaviour {
 					c = backColor;
 					break;
 			}
+
+			contentSizeFitter.enabled = false;
+			contentSizeFitter.SetLayoutVertical();
+			LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)entryGO.transform);
+			contentSizeFitter.enabled = true;
+
 			DialogLogEntry entry = entryGO.GetComponent<DialogLogEntry>();
 
 			entry.Init(name, text, avatar, c);

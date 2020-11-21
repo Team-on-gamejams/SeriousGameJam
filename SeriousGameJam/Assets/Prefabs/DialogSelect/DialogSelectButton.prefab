@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 5276672864813567015}
   - component: {fileID: 1404404380}
   - component: {fileID: 1404404379}
+  - component: {fileID: 1052474930467429571}
   m_Layer: 5
   m_Name: DialogSelectButton
   m_TagString: Untagged
@@ -220,6 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textField: {fileID: 5276672862861955139}
   btn: {fileID: 5276672864813567015}
+  anim: {fileID: 1052474930467429571}
 --- !u!114 &5276672864813567014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,3 +333,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
+--- !u!95 &1052474930467429571
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5276672864813567013}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fd12fe0a2720704f8e437aa840808f5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

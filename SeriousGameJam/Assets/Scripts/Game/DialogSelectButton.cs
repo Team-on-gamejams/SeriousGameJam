@@ -9,6 +9,7 @@ public class DialogSelectButton : MonoBehaviour {
 	[Header("Refs"), Space]
 	[SerializeField] TextMeshProUGUI textField;
 	[SerializeField] Button btn;
+	[SerializeField] Animator anim;
 	KeyCode key;
 	KeyCode keyAlt;
 
@@ -61,6 +62,18 @@ public class DialogSelectButton : MonoBehaviour {
 				keyAlt = KeyCode.Keypad0;
 				break;
 		}
+	}
+
+	public void Show() {
+		anim.Play("Show");
+	}
+
+	public void Hide() {
+		anim.Play("Hide");
+	}
+
+	public void OnHideAnimEnd() {
+		Destroy(gameObject);
 	}
 
 	private void Update() {

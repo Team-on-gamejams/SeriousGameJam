@@ -3757,6 +3757,7 @@ MonoBehaviour:
   buttonPrefab: {fileID: 5276672864813567013, guid: e6a13db171acf2d499189c705ccf90f9,
     type: 3}
   layoutGroup: {fileID: 1837871784}
+  contentSizeFitter: {fileID: 1837871783}
 --- !u!1 &841297400
 GameObject:
   m_ObjectHideFlags: 0
@@ -4755,6 +4756,7 @@ MonoBehaviour:
     type: 3}
   layoutGroup: {fileID: 286834221}
   scroll: {fileID: 107478039}
+  contentSizeFitter: {fileID: 286834222}
 --- !u!1 &1304636310
 GameObject:
   m_ObjectHideFlags: 0
