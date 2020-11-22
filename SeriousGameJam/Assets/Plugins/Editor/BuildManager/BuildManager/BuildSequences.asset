@@ -884,31 +884,4 @@ MonoBehaviour:
       needGamejolthPush: 0
       needSteamPush: 0
       needGoogleDrivePush: 0
-  - isEnabled: 1
-    editorName: WebGL
-    itchGameLink: teamon/FantasyHotline
-    scriptingDefineSymbolsOverride: 
-    builds:
-    - isEnabled: 1
-      outputRoot: Builds/
-      middlePath: $NAME_$VERSION_$PLATFORM/
-      isPassbyBuild: 0
-      scriptingDefineSymbolsOverride: 
-      targetGroup: 13
-      target: 20
-      options: 0
-      isVirtualRealitySupported: 0
-      isReleaseBuild: 0
-      needZip: 1
-      compressDirPath: $NAME_$VERSION_$PLATFORM
-      needItchPush: 1
-      itchChannel: webgl
-      itchDirPath: $NAME_$VERSION_$PLATFORM
-      itchAddLastChangelogUpdateNameToVerison: 1
-      itchLastChangelogUpdateName: 0.3 - Jam edition
-      useGithubActions: 0
-      useUnityActions: 0
-      needGamejolthPush: 0
-      needSteamPush: 0
-      needGoogleDrivePush: 0
   scriptingDefineSymbols: UNITY_POST_PROCESSING_STACK_V2;TMP_PRESENT;ARABSUPPORT_ENABLED;POLYGLOT;GAME_TEMPLATE
