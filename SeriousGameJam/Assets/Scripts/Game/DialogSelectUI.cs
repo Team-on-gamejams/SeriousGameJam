@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class DialogSelectUI : MonoBehaviour {
 	[Header("Prefabs"), Space]
 	[SerializeField] GameObject buttonPrefab;
+	[SerializeField] GameObject buttonStartPrefab;
+	[SerializeField] GameObject buttonEndPrefab;
+	[SerializeField] GameObject buttonGameOverPrefab;
 
 	[Header("Refs"), Space]
 	[SerializeField] VerticalLayoutGroup layoutGroup;
@@ -15,7 +18,25 @@ public class DialogSelectUI : MonoBehaviour {
 	List<DialogSelectButton> buttons = new List<DialogSelectButton>();
 
 	public void AddButton(string text, Action onClick) {
-		GameObject buttonGO = Instantiate(buttonPrefab, layoutGroup.transform);
+		GameObject buttonGO;
+
+		switch (text.Trim().ToLower()) {
+			case "start":
+				buttonGO = Instantiate(buttonStartPrefab, layoutGroup.transform);
+				break;
+
+			case "end":
+				buttonGO = Instantiate(buttonEndPrefab, layoutGroup.transform);
+				break;
+
+			case "gameover":
+				buttonGO = Instantiate(buttonGameOverPrefab, layoutGroup.transform);
+				break;
+
+			default:
+				buttonGO = Instantiate(buttonPrefab, layoutGroup.transform);
+				break;
+		}
 		DialogSelectButton button = buttonGO.GetComponent<DialogSelectButton>();
 
 		button.Init(buttons.Count + 1, text, onClick);

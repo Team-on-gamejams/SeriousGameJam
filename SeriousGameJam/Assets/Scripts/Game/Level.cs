@@ -33,7 +33,7 @@ public class Level : MonoBehaviour {
 		currPatient = Instantiate(patients[currPatientId]);
 
 		dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Вам звонить {currPatient.name}", onShowLog: ()=> {
-			dialogSelect.AddButton("Пiдняти трубку", () => {
+			dialogSelect.AddButton("start", () => {
 				dialogSelect.Clear();
 				NodeLinkData narrativeData = currPatient.dialogue.NodeLinks.First(); //Entrypoint node
 				ProceedToNarrative(narrativeData.TargetNodeGUID);
@@ -84,7 +84,7 @@ public class Level : MonoBehaviour {
 		if (currPatientId == patients.Length) {
 			dialogLog.ClearLog();
 			dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Ви пройшли гру! Конгарц", onShowLog: () => {
-				dialogSelect.AddButton("Start again", () => {
+				dialogSelect.AddButton("gameover", () => {
 					currPatientId = 0;
 					StartNewPatient();
 				});
@@ -92,7 +92,7 @@ public class Level : MonoBehaviour {
 		}
 		else {
 			dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Розмова закiнчена", onShowLog: ()=> {
-				dialogSelect.AddButton("Покласти трубку", () => {
+				dialogSelect.AddButton("end", () => {
 					StartNewPatient();
 				});
 			});

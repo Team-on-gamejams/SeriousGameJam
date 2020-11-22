@@ -14,7 +14,8 @@ public class DialogSelectButton : MonoBehaviour {
 	KeyCode keyAlt;
 
 	public void Init(int id, string text, params Action[] onClicks) {
-		textField.text = $"{id}) {text}";
+		if(textField)
+			textField.text = $"{id}) {text}";
 
 		foreach (var click in onClicks) {
 			btn.onClick.AddListener(() => click?.Invoke()) ;
