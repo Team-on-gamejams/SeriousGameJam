@@ -8,6 +8,12 @@ using UnityEngine.UI;
 using Subtegral.DialogueSystem.DataContainers;
 
 public class Level : MonoBehaviour {
+	[Header("Music"), Space]
+	[SerializeField] AudioClip defaultAmbient;
+	[SerializeField] AudioClip winAmbient;
+	[SerializeField] AudioClip loseAmbient;
+
+
 	[Header("Data"), Space]
 	string operatorName = "Operator";
 	[SerializeField] PatientData[] patients;
@@ -19,6 +25,7 @@ public class Level : MonoBehaviour {
 
 	int currPatientId = 0;
 	PatientData currPatient;
+	AudioSource winAmbientAS;
 
 	void Start() {
 		dialogSelect.ClearForce();
@@ -30,6 +37,10 @@ public class Level : MonoBehaviour {
 		dialogLog.ClearLog();
 		dialogSelect.Clear();
 
+		if (winAmbientAS) {
+			AudioManager.Instance.ChangeASVolume(winAmbientAS, 0.0f, 1.0f);
+		}
+		AudioManager.Instance.PlayMusic(defaultAmbient);
 		currPatient = Instantiate(patients[currPatientId]);
 
 		dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Вам звонить {currPatient.name}", onShowLog: ()=> {
@@ -47,6 +58,15 @@ public class Level : MonoBehaviour {
 		List<NodeLinkData> choices = currPatient.dialogue.NodeLinks.Where(x => x.BaseNodeGUID == narrativeDataGUID).ToList();
 
 		PatientData.PatientMoodData mood = currPatient.GetMoodData(nodeData.mood);
+
+		if (mood.mood == PatientMood.ExitNotOK) {
+			AudioManager.Instance.PlayMusic(loseAmbient, time: 0.5f);
+		}
+		else if (mood.mood == PatientMood.ExitOk) {
+			AudioManager.Instance.MuteMusic(AudioManager.Instance.crossfadeTime);
+			winAmbientAS = AudioManager.Instance.Play(winAmbient, 0.5f, 1.0f, AudioManager.Instance.crossfadeTime);
+			LeanTween.delayedCall(winAmbient.length - AudioManager.Instance.crossfadeTime, AudioManager.Instance.ContinueMusicAfterMute);
+		}
 
 		dialogLog.AddToLog(DialogLogUI.LogEntryType.Patient, ProcessProperties(text), currPatient.name, mood.backColor, currPatient, mood, () => {
 			foreach (var choice in choices) {

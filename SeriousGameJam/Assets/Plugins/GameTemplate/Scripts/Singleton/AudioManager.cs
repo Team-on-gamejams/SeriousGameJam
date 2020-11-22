@@ -125,8 +125,11 @@ public class AudioManager : Singleton<AudioManager> {
 
 	//--------------------------------------------------------------------------------------
 	//Music 2D
-	public void PlayMusic(AudioClip clip, float volume = 1.0f) {
+	public void PlayMusic(AudioClip clip, float volume = 1.0f, float time = -1) {
 		if (currMusicClip != clip) {
+			if (time == -1)
+				time = crossfadeTime;
+
 			AudioSource oldSource = currMusicClip != null ? musicAudioSources[currMusicClip] : null;
 			currMusicClip = clip;
 
@@ -136,15 +139,15 @@ public class AudioManager : Singleton<AudioManager> {
 			if (currMusicClip != null) {
 				if (musicAudioSources.ContainsKey(currMusicClip) && musicAudioSources[currMusicClip] != null) {
 					AudioSource newAS = musicAudioSources[currMusicClip];
-					ChangeASVolume(newAS, volume);
+					ChangeASVolume(newAS, volume, time);
 				}
 				else {
-					musicAudioSources[currMusicClip] = PlayLoop(currMusicClip, volume, playDelay: crossfadeTime);
+					musicAudioSources[currMusicClip] = PlayLoop(currMusicClip, volume, playDelay: time);
 					DontDestroyOnLoad(musicAudioSources[currMusicClip].gameObject);
 				}
 			}
 
-			ChangeASVolume(oldSource, 0.0f);
+			ChangeASVolume(oldSource, 0.0f, time);
 		}
 	}
 
@@ -393,7 +396,7 @@ public class AudioManager : Singleton<AudioManager> {
 		ChangeASVolume(source, volume, crossfadeTime);
 	}
 
-	void ChangeASVolume(AudioSource source, float volume, float time) {
+	public void ChangeASVolume(AudioSource source, float volume, float time) {
 		if (source != null) {
 			LeanTween.cancel(source.gameObject, false);
 			if (time == 0) {
@@ -403,7 +406,8 @@ public class AudioManager : Singleton<AudioManager> {
 				LeanTween.value(source.gameObject, source.volume, volume, time)
 				.setIgnoreTimeScale(true)
 				.setOnUpdate((float v) => {
-					source.volume = v;
+					if(source)
+						source.volume = v;
 				});
 			}
 		}
