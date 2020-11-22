@@ -26,7 +26,7 @@ MonoBehaviour:
       targetGroup: 1
       target: 5
       options: 0
-      isVirtualRealitySupported: 0
+      isVirtualRealitySupported: 1
       isReleaseBuild: 0
       needZip: 0
       compressDirPath: $NAME_$PLATFORM
@@ -879,6 +879,33 @@ MonoBehaviour:
       itchDirPath: $NAME_$VERSION_$PLATFORM$EXECUTABLE
       itchAddLastChangelogUpdateNameToVerison: 1
       itchLastChangelogUpdateName: 
+      useGithubActions: 0
+      useUnityActions: 0
+      needGamejolthPush: 0
+      needSteamPush: 0
+      needGoogleDrivePush: 0
+  - isEnabled: 1
+    editorName: WebGL
+    itchGameLink: teamon/FantasyHotline
+    scriptingDefineSymbolsOverride: 
+    builds:
+    - isEnabled: 1
+      outputRoot: Builds/
+      middlePath: $NAME_$VERSION_$PLATFORM/
+      isPassbyBuild: 0
+      scriptingDefineSymbolsOverride: 
+      targetGroup: 13
+      target: 20
+      options: 0
+      isVirtualRealitySupported: 0
+      isReleaseBuild: 0
+      needZip: 1
+      compressDirPath: $NAME_$VERSION_$PLATFORM
+      needItchPush: 1
+      itchChannel: webgl
+      itchDirPath: $NAME_$VERSION_$PLATFORM
+      itchAddLastChangelogUpdateNameToVerison: 1
+      itchLastChangelogUpdateName: 0.3 - Jam edition
       useGithubActions: 0
       useUnityActions: 0
       needGamejolthPush: 0
