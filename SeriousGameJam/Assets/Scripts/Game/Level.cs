@@ -41,7 +41,7 @@ public class Level : MonoBehaviour {
 	}
 
 	void StartNewPatient() {
-		dialogLog.ClearLog();
+		//dialogLog.ClearLog();
 		dialogSelect.Clear();
 
 		if (winAmbientAS) {
