@@ -48,7 +48,7 @@ public class Level : MonoBehaviour {
 
 		PatientData.PatientMoodData mood = currPatient.GetMoodData(nodeData.mood);
 
-		dialogLog.AddToLog(DialogLogUI.LogEntryType.Patient, ProcessProperties(text), currPatient.name, mood.backColor, mood.avatar, () => {
+		dialogLog.AddToLog(DialogLogUI.LogEntryType.Patient, ProcessProperties(text), currPatient.name, mood.backColor, currPatient, mood, () => {
 			foreach (var choice in choices) {
 				string choiceText = ProcessProperties(choice.PortName);
 
@@ -56,7 +56,8 @@ public class Level : MonoBehaviour {
 					dialogSelect.Clear();
 					dialogLog.AddToLog(DialogLogUI.LogEntryType.Operator, choiceText, operatorName, minTimeToCallShow: 0.5f, onShowLog: () => {
 						switch (mood.mood) {
-							case PatientMood.Exit:
+							case PatientMood.ExitOk:
+							case PatientMood.ExitNotOK:
 								EndPatient();
 								break;
 
@@ -70,7 +71,7 @@ public class Level : MonoBehaviour {
 				});
 			}
 
-			if (mood.mood == PatientMood.Exit) {
+			if (mood.mood == PatientMood.ExitOk || mood.mood == PatientMood.ExitNotOK) {
 				EndPatient();
 			}
 		});

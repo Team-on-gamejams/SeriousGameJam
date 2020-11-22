@@ -30,7 +30,7 @@ public class DialogLogUI : MonoBehaviour {
 	List<DialogLogEntry> entries = new List<DialogLogEntry>();
 	PatientTypingEntry patientTyping;
 
-	public void AddToLog(LogEntryType type, string text, string name = "", Color backColor = default, Sprite avatar = null, Action onShowLog = null, float minTimeToCallShow = 0.0f) {
+	public void AddToLog(LogEntryType type, string text, string name = "", Color backColor = default, PatientData patientData = null, PatientData.PatientMoodData moodData = default, Action onShowLog = null, float minTimeToCallShow = 0.0f) {
 		if (type == LogEntryType.Patient) {
 			GameObject typingGO = Instantiate(patientTypingPrefab, layoutGroup.transform);
 			patientTyping = typingGO.GetComponent<PatientTypingEntry>();
@@ -77,8 +77,15 @@ public class DialogLogUI : MonoBehaviour {
 
 			DialogLogEntry entry = entryGO.GetComponent<DialogLogEntry>();
 
-			entry.Init(name, text, avatar, c);
+			if (patientData != null && patientData.skeletonDataAsset != null && moodData.animationSpine != null) {
+				entry.Init(name, text, patientData.skeletonDataAsset, moodData.animationSpine, c);
+			}
+			else {
+				entry.Init(name, text, moodData.avatar, c);
+			}
 
+			if(entries.Count != 0)
+				entries[entries.Count - 1].OnBecomeOld();
 			entries.Add(entry);
 
 			StartCoroutine(ScrollToBottom(onShowLog, minTimeToCallShow));
