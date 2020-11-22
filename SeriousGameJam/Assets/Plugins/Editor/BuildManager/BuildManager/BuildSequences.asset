@@ -862,7 +862,7 @@ MonoBehaviour:
       needGamejolthPush: 0
       needSteamPush: 0
       needGoogleDrivePush: 0
-    - isEnabled: 1
+    - isEnabled: 0
       outputRoot: Builds/
       middlePath: $NAME_$VERSION_$PLATFORM$EXECUTABLE
       isPassbyBuild: 0
