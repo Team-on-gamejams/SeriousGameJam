@@ -34,7 +34,7 @@ public class DialogLogUI : MonoBehaviour {
 		if (type == LogEntryType.Patient) {
 			GameObject typingGO = Instantiate(patientTypingPrefab, layoutGroup.transform);
 			patientTyping = typingGO.GetComponent<PatientTypingEntry>();
-			patientTyping.Init(backColor);
+			patientTyping.Init(patientData != null ? patientData.GetMoodData("normal").backColor : backColor);
 
 			StartCoroutine(ScrollToBottom(null, 0.0f));
 
@@ -84,8 +84,10 @@ public class DialogLogUI : MonoBehaviour {
 				entry.Init(name, text, moodData.avatar, c);
 			}
 
-			if(entries.Count != 0)
-				entries[entries.Count - 1].OnBecomeOld();
+			if(type != LogEntryType.Servise) {
+				for(int i = 0; i < entries.Count; ++i)
+					entries[i].OnBecomeOld();
+			}
 			entries.Add(entry);
 
 			StartCoroutine(ScrollToBottom(onShowLog, minTimeToCallShow));
