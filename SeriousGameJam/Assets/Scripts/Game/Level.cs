@@ -17,7 +17,8 @@ public class Level : MonoBehaviour {
 	[SerializeField] AudioClip patientWriteSound;
 	[SerializeField] AudioClip systemMessageSound;
 	[SerializeField] AudioClip callSound;
-
+	[SerializeField] AudioClip buttonAppear;
+	[SerializeField] float buttonAppearVolume = 0.5f;
 
 	[Header("Data"), Space]
 	[SerializeField] PatientData[] patients;
@@ -75,13 +76,15 @@ public class Level : MonoBehaviour {
 		}
 		else if (mood.mood == PatientMood.ExitOk) {
 			AudioManager.Instance.MuteMusic(AudioManager.Instance.crossfadeTime);
-			winAmbientAS = AudioManager.Instance.Play(winAmbient, 0.5f, 1.0f, AudioManager.Instance.crossfadeTime);
+			winAmbientAS = AudioManager.Instance.Play(winAmbient, 0.4f, 1.0f, AudioManager.Instance.crossfadeTime);
 			LeanTween.delayedCall(winAmbient.length - AudioManager.Instance.crossfadeTime, AudioManager.Instance.ContinueMusicAfterMute);
 		}
 
 		dialogLog.AddToLog(DialogLogUI.LogEntryType.Patient, ProcessProperties(text), currPatient.name, mood.backColor, currPatient, mood, ()=> { 
 			AudioManager.Instance.Play(patientWriteSound, 0.5f);
 		}, () => {
+			AudioManager.Instance.Play(buttonAppear, buttonAppearVolume);
+
 			foreach (var choice in choices) {
 				string choiceText = ProcessProperties(choice.PortName);
 
@@ -118,6 +121,7 @@ public class Level : MonoBehaviour {
 			dialogLog.ClearLog();
 			AudioManager.Instance.Play(systemMessageSound);
 			dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Ви пройшли гру! Конгарц", onShowLog: () => {
+				AudioManager.Instance.Play(buttonAppear, buttonAppearVolume);
 				dialogSelect.AddButton("gameover", () => {
 					currPatientId = 0;
 					StartNewPatient();
@@ -127,6 +131,7 @@ public class Level : MonoBehaviour {
 		else {
 			AudioManager.Instance.Play(systemMessageSound);
 			dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Розмова закiнчена", onShowLog: ()=> {
+				AudioManager.Instance.Play(buttonAppear, buttonAppearVolume);
 				dialogSelect.AddButton("end", () => {
 					StartNewPatient();
 				});
