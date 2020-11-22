@@ -588,7 +588,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00012207031}
+  m_AnchoredPosition: {x: 0, y: -0.00012207031}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &286834221
@@ -1971,7 +1971,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 321947206}
   m_HandleRect: {fileID: 321947205}
   m_Direction: 2
-  m_Value: 0.9999998
+  m_Value: 1.0000001
   m_Size: 0.48115548
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -3425,6 +3425,8 @@ MonoBehaviour:
   patients:
   - {fileID: 11400000, guid: ced0a2679ad09d24499e982c77a09bca, type: 2}
   - {fileID: 11400000, guid: a9e60f230b53ebc40bc42221724085ef, type: 2}
+  - {fileID: 11400000, guid: 37d10933da0eb964cb6ab73efb4f0539, type: 2}
+  - {fileID: 11400000, guid: e83e3655495ae8a45b81308114cfdda0, type: 2}
   operatorName: Operator
   dialogLog: {fileID: 1259861698}
   dialogSelect: {fileID: 836591695}

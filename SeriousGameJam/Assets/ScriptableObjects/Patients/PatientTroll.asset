@@ -20,7 +20,7 @@ MonoBehaviour:
   - mood: 1
     backColor: {r: 1, g: 1, b: 1, a: 1}
     avatar: {fileID: 0}
-    animationSpine: {fileID: 11400000, guid: 28343c7efc9d99b49ae1024406a8d4bf, type: 2}
+    animationSpine: {fileID: 11400000, guid: af38aa22df3f29e49a5774ecf42864d5, type: 2}
   - mood: 2
     backColor: {r: 1, g: 1, b: 1, a: 1}
     avatar: {fileID: 0}
