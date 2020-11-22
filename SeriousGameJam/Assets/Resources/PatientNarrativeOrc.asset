@@ -17,112 +17,69 @@ MonoBehaviour:
     PortName: Next
     TargetNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
   - BaseNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
-    PortName: "\u0423 \u0412\u0430\u0441 \u0435\u0441\u0442\u044C \u0431\u043B\u0438\u0437\u043A\u0438\u0435
-      \u0434\u0440\u0443\u0437\u044C\u044F, \u0440\u043E\u0434\u0441\u0442\u0432\u0435\u043D\u043D\u0438\u043A\u0438,
-      \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u0443\u0436\u0435 \u0437\u043D\u0430\u044E\u0442
-      \u043E\u0431 \u044D\u0442\u043E\u043C?"
+    PortName: Do you have close friends, relatives who already know about this?
     TargetNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
   - BaseNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
-    PortName: "\u041F\u0440\u0438 \u043A\u043E\u043C\u043C\u0443\u043D\u0438\u043A\u0430\u0446\u0438\u0438
-      \u0441 \u043E\u0441\u0442\u0430\u043B\u044C\u043D\u044B\u043C\u0438 \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435
-      \u043F\u043E\u0441\u0442\u0435\u043F\u0435\u043D\u043D\u043E \u0432\u0432\u043E\u0434\u0438\u0442\u044C 
-      \u043F\u0440\u0435\u0434\u043F\u043E\u0447\u0438\u0442\u0430\u0435\u043C\u0443\u044E
-      \u043C\u0430\u043D\u0435\u0440\u0443 \u043E\u0431\u0449\u0435\u043D\u0438\u044F"
-    TargetNodeGUID: 0d0d1204-fd50-4b9c-bb25-984a8f33acbe
-  - BaseNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
-    PortName: "\u0412\u0430\u043C \u043D\u0435 \u0441\u0442\u043E\u0438\u0442 \u0431\u043E\u044F\u0442\u044C\u0441\u044F,
-      \u043E\u0447\u0435\u043D\u044C \u0432\u0430\u0436\u043D\u043E \u0431\u044B\u0442\u044C
-      \u0441\u043E\u0431\u043E\u0439."
-    TargetNodeGUID: b5cc8987-6cbc-4753-87dd-a6a392a785f0
-  - BaseNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
-    PortName: "\u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u043F\u0440\u0438\u0437\u043D\u0430\u0442\u044C\u0441\u044F
-      \u0432\u043E \u0432\u0441\u0451\u043C, \u0447\u0435\u0441\u0442\u043D\u043E\u0441\u0442\u044C
-      \u043B\u0443\u0447\u0448\u0430\u044F \u043F\u043E\u043B\u0438\u0442\u0438\u043A\u0430."
-    TargetNodeGUID: b5cc8987-6cbc-4753-87dd-a6a392a785f0
-  - BaseNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
-    PortName: "\u041F\u0440\u0438 \u043A\u043E\u043C\u043C\u0443\u043D\u0438\u043A\u0430\u0446\u0438\u0438
-      \u0441 \u043E\u0441\u0442\u0430\u043B\u044C\u043D\u044B\u043C\u0438 \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435
-      \u043F\u043E\u0441\u0442\u0435\u043F\u0435\u043D\u043D\u043E \u0432\u0432\u043E\u0434\u0438\u0442\u044C 
-      \u043F\u0440\u0435\u0434\u043F\u043E\u0447\u0438\u0442\u0430\u0435\u043C\u0443\u044E
-      \u043C\u0430\u043D\u0435\u0440\u0443 \u043E\u0431\u0449\u0435\u043D\u0438\u044F"
-    TargetNodeGUID: 0d0d1204-fd50-4b9c-bb25-984a8f33acbe
-  - BaseNodeGUID: 0d0d1204-fd50-4b9c-bb25-984a8f33acbe
-    PortName: "\u0412 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439 \u0440\u0430\u0437,
-      \u043A\u043E\u0433\u0434\u0430 \u0432\u0430\u043C \u043D\u0443\u0436\u043D\u043E
-      \u0431\u0443\u0434\u0435\u0442 \u043D\u0430\u043A\u0440\u0438\u0447\u0430\u0442\u044C
-      \u043D\u0430 \u043A\u043E\u0433\u043E-\u043D\u0438\u0431\u0443\u0434\u044C, 
-      \u043F\u0440\u043E\u0441\u0442\u043E \u0441\u0434\u0435\u0440\u0436\u0438\u0442\u0435
-      \u0441\u0435\u0431\u044F \u0438 \u043E\u0442\u0440\u0435\u0430\u0433\u0438\u0440\u0443\u0439\u0442\u0435
-      \u0442\u0430\u043A, \u043A\u0430\u043A \u0432\u044B \u0441\u0447\u0438\u0442\u0430\u0435\u0442\u0435
-      \u043D\u0443\u0436\u043D\u044B\u043C.  \u041F\u0440\u0438 \u044D\u0442\u043E\u043C
-      \u0431\u0443\u0434\u044C\u0442\u0435 \u0443\u0432\u0435\u0440\u0435\u043D\u044B
-      \u0432 \u0441\u0435\u0431\u0435 \u0442\u0430\u043A \u0436\u0435, \u043A\u0430\u043A
-      \u0432\u0441\u0435\u0433\u0434\u0430. "
+    PortName: 'When communicating with others, try to gradually introduce preferred
+      manner of communication. '
+    TargetNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
+  - BaseNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
+    PortName: Try to confess everything, honesty is the best policy.
+    TargetNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
+  - BaseNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
+    PortName: 'The next time you need to yell at someone just restrain yourself and
+      respond as you see fit.\n In doing so, be as confident as ever. '
     TargetNodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
-  - BaseNodeGUID: b5cc8987-6cbc-4753-87dd-a6a392a785f0
-    PortName: "\u0421\u043F\u043E\u0434\u0456\u0432\u0430\u044E\u0441\u044C \u043C\u043E\u044F
-      \u0432\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u044C \u0434\u043E\u043F\u043E\u043C\u043E\u0433\u043B\u0430"
+  - BaseNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
+    PortName: Hope that my help was usefull
     TargetNodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
   - BaseNodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
-    PortName: "\u0421\u043F\u043E\u0434\u0456\u0432\u0430\u044E\u0441\u044C \u043C\u043E\u044F
-      \u0432\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u044C \u0434\u043E\u043F\u043E\u043C\u043E\u0433\u043B\u0430"
+    PortName: Hope that my help was usefull
     TargetNodeGUID: 359adee4-113c-4abc-b4d8-e9239af3f5cd
+  - BaseNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
+    PortName: You don't have to be afraid, it is very important to be yourself.
+    TargetNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
+  - BaseNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
+    PortName: 'When communicating with others, try to gradually introduce preferred
+      manner of communication. '
+    TargetNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
+  - BaseNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
+    PortName: Try to confess everything, honesty is the best policy.
+    TargetNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
   DialogueNodeData:
-  - NodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
-    DialogueText: "\u0423 \u043C\u0435\u043D\u044F \u0435\u0441\u0442\u044C \u043F\u0440\u043E\u0431\u043B\u0435\u043C\u0430
-      \u043A\u043E\u0442\u043E\u0440\u0430\u044F \u043C\u0435\u0448\u0430\u0435\u0442
-      \u043C\u043D\u0435 \u043D\u043E\u0440\u043C\u0430\u043B\u044C\u043D\u043E \u0436\u0438\u0442\u044C.
-      \u041C\u043D\u0435 \u0441\u043A\u0430\u0437\u0430\u043B\u0438 \u0432\u044B
-      \u043C\u043E\u0436\u0435\u0442\u0435 \u043F\u043E\u043C\u043E\u0447\u044C \u0441
-      \u043D\u0435\u0439. \u042F \u043E\u0447\u0435\u043D\u044C \u0434\u043E\u043B\u0433\u043E\u0435
-      \u0432\u0440\u0435\u043C\u044F \u043D\u0430\u0445\u043E\u0436\u0443\u0441\u044C 
-      \u0432 \u0447\u0438\u0441\u043B\u0435 \u043B\u0438\u0434\u0435\u0440\u043E\u0432
-      \u0432 \u043D\u0430\u0448\u0435\u043C \u043A\u043B\u0430\u043D\u0435. \u0423
-      \u043D\u0430\u0441 \u0432 \u043E\u0431\u0449\u0435\u0441\u0442\u0432\u0435
-      \u043E\u0447\u0435\u043D\u044C \u0441\u0432\u043E\u0435\u043E\u0431\u0440\u0430\u0437\u043D\u044B\u0435
-      \u0446\u0435\u043D\u043D\u043E\u0441\u0442\u0438.  \u041D\u0430\u0440\u043E\u0434
-      \u043F\u043E\u043D\u0438\u043C\u0430\u0435\u0442 \u0442\u043E\u043B\u044C\u043A\u043E
-      \u044F\u0437\u044B\u043A \u0433\u0440\u0443\u0431\u043E\u0439 \u0441\u0438\u043B\u044B
-      \u0438 \u043D\u0435 \u0442\u0435\u0440\u043F\u0438\u0442 \u0441\u043B\u0430\u0431\u043E\u0441\u0442\u044C. 
-      \u041C\u043D\u0435 \u043F\u0440\u0438\u0445\u043E\u0434\u0438\u0442\u044C\u0441\u044F
-      \u043F\u043E\u0441\u0442\u043E\u044F\u043D\u043D\u043E \u043D\u0430 \u043D\u0438\u0445
-      \u043A\u0440\u0438\u0447\u0430\u0442\u044C, \u0430 \u0438\u043D\u043E\u0433\u0434\u0430
-      \u0434\u0430\u0436\u0435 \u0438 \u0431\u0438\u0442\u044C.  \u042F \u0443\u0441\u0442\u0430\u043B
-      \u043E\u0442 \u0432\u0441\u0435\u0433\u043E \u044D\u0442\u043E\u0433\u043E,
-      \u043D\u043E \u043D\u0435 \u0437\u043D\u0430\u044E \u043A\u0430\u043A \u0441\u043A\u0430\u0437\u0430\u0442\u044C
-      \u043E\u0441\u0442\u0430\u043B\u044C\u043D\u044B\u043C,  \u0442\u0430\u043A
-      \u0447\u0442\u043E\u0431\u044B \u043C\u0435\u043D\u044F \u043D\u0435 \u0438\u0437\u0433\u043D\u0430\u043B\u0438
-      \u0438\u0437 \u043A\u043B\u0430\u043D\u0430. "
-    mood: angry
-    Position: {x: 193, y: 165}
-  - NodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
-    DialogueText: "\u041D\u0435\u0442, \u044F \u0431\u043E\u044E\u0441\u044C \u043F\u0440\u0438\u0437\u043D\u0430\u0442\u044C\u0441\u044F,
-      \u043C\u0435\u043D\u044F \u043F\u043E\u0441\u0447\u0438\u0442\u0430\u044E\u0442
-      \u0441\u043B\u0430\u0431\u044B\u043C"
-    mood: no
-    Position: {x: 3444, y: -10}
-  - NodeGUID: 0d0d1204-fd50-4b9c-bb25-984a8f33acbe
-    DialogueText: "\u042D\u0442\u043E \u043A\u0430\u043A?"
-    mood: normal
-    Position: {x: 3266, y: 250}
-  - NodeGUID: b5cc8987-6cbc-4753-87dd-a6a392a785f0
-    DialogueText: "\u0414\u0410! \u0412\u044B \u043F\u0440\u0430\u0432\u044B. \u042F
-      \u0442\u0430\u043A \u0438 \u0441\u0434\u0435\u043B\u0430\u044E."
-    mood: normal
-    Position: {x: 4745, y: -11}
-  - NodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
-    DialogueText: "\u041E, \u043E\u0431 \u044D\u0442\u043E\u043C \u044F \u043D\u0435
-      \u043F\u043E\u0434\u0443\u043C\u0430\u043B. \u042F \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u044E."
-    mood: normal
-    Position: {x: 4760, y: 226}
-  - NodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
-    DialogueText: "<b><color=red>\u0438\u0437\u0433\u043E\u043D\u044F\u044E\u0442
-      \u0438\u0437 \u043A\u043B\u0430\u043D\u0430.</color></b>"
-    mood: exitno
-    Position: {x: 5357, y: -30}
   - NodeGUID: 359adee4-113c-4abc-b4d8-e9239af3f5cd
-    DialogueText: "<b><color=green>\u041E\u0440\u043A \u0441\u0447\u0430\u0441\u0442\u043B\u0438\u0432</color></b>"
+    DialogueText: <b>Orc is happy</b>
     mood: exitok
     Position: {x: 5367, y: 230}
+  - NodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
+    DialogueText: "I have a problem that prevents me from living normally. \\n I
+      was told you can help with her. I have been for a very long time among the
+      leaders in our clan. We have very peculiar values \u200B\u200Bin our society.
+      The people understand only the language of brute force and do not tolerate
+      weakness.\\n I have to constantly shout at them, and sometimes even beat them.Im
+      already bored from the Waaagh! I'm tired of all this, but I don't know how
+      to tell the others so that I am not expelled from the clan. "
+    mood: angry
+    Position: {x: 287, y: 9}
+  - NodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
+    DialogueText: 'How''s that? '
+    mood: normal
+    Position: {x: 3821, y: 232}
+  - NodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
+    DialogueText: YES! You're right. I will do so.
+    mood: normal
+    Position: {x: 4132, y: -280}
+  - NodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
+    DialogueText: <b>Orc was expelled from the clan</b>
+    mood: exitno
+    Position: {x: 4867, y: -279}
+  - NodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
+    DialogueText: Oh, I didn't think about that. I'll try.
+    mood: normal
+    Position: {x: 4864, y: 233}
+  - NodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
+    DialogueText: No, I'm afraid to admit, I will be considered weak.
+    mood: no
+    Position: {x: 3006, y: -308}
   ExposedProperties: []
   CommentBlockData: []

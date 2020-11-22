@@ -52,7 +52,7 @@ public class Level : MonoBehaviour {
 
 		AudioSource callAS = AudioManager.Instance.PlayLoop(callSound, 0.15f);
 		AudioManager.Instance.Play(systemMessageSound);
-		dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Вам звонить {currPatient.name}", onShowLog: ()=> {
+		dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Call with <i>{currPatient.name}</i> started", onShowLog: ()=> {
 			dialogSelect.AddButton("start", () => {
 				AudioManager.Instance.ChangeASVolume(callAS, 0.0f, 0.25f);
 				Destroy(callAS.gameObject, 1.0f);
@@ -130,7 +130,7 @@ public class Level : MonoBehaviour {
 		}
 		else {
 			AudioManager.Instance.Play(systemMessageSound);
-			dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Розмова закiнчена", onShowLog: ()=> {
+			dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Call ended", onShowLog: ()=> {
 				AudioManager.Instance.Play(buttonAppear, buttonAppearVolume);
 				dialogSelect.AddButton("end", () => {
 					StartNewPatient();
@@ -142,6 +142,7 @@ public class Level : MonoBehaviour {
 	string ProcessProperties(string processedText) {
 		foreach (var exposedProperty in currPatient.dialogue.ExposedProperties)
 			processedText = processedText.Replace($"[{exposedProperty.PropertyName}]", exposedProperty.PropertyValue);
+		processedText = processedText.Replace("\\n", "\n");
 		return processedText;
 	}
 }

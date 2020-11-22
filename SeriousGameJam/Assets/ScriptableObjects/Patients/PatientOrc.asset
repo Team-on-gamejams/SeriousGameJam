@@ -37,6 +37,6 @@ MonoBehaviour:
     backColor: {r: 1, g: 1, b: 1, a: 1}
     avatar: {fileID: 0}
     animationSpine: {fileID: 11400000, guid: e431f58fd2e196d4092a2c85d9280a81, type: 2}
-  name: "\u0414\u043E\u0431\u0440\u044B\u0439 \u041E\u0440\u043A"
+  name: Good Orc
   dialogue: {fileID: 11400000, guid: 2a529dd52b2fefb42a238a2389df72c7, type: 2}
   skeletonDataAsset: {fileID: 11400000, guid: b786bbfedbadc9b40813500f75472a06, type: 2}
