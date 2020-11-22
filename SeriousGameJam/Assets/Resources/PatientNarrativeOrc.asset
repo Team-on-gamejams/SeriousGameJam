@@ -79,12 +79,12 @@ MonoBehaviour:
     Position: {x: 3785, y: -282}
   - NodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
     DialogueText: "I have a problem that prevents me from living normally. \\n I
-      was told you can help with her. I have been for a very long time among the
-      leaders in our clan. We have very peculiar values \u200B\u200Bin our society.
-      The people understand only the language of brute force and do not tolerate
-      weakness.\\n I have to constantly shout at them, and sometimes even beat them.Im
-      already bored from the Waaagh! I'm tired of all this, but I don't know how
-      to tell the others so that I am not expelled from the clan. "
+      was told you can help with it. I have been for a very long time among the leaders
+      in our clan. We have very peculiar values \u200B\u200Bin our society. The people
+      understand only the language of brute force and do not tolerate weakness.\\n
+      I have to constantly shout at them, and sometimes even beat them.Im already
+      bored from the Waaagh! I'm tired of all this, but I don't know how to tell
+      the others so that I am not expelled from the clan. "
     mood: angry
     Position: {x: 836, y: 160}
   - NodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
