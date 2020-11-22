@@ -54,7 +54,7 @@ namespace Subtegral.DialogueSystem.Editor
                 container.DialogueNodeData = dialogueContainerObject.DialogueNodeData;
                 container.ExposedProperties = dialogueContainerObject.ExposedProperties;
                 container.CommentBlockData = dialogueContainerObject.CommentBlockData;
-
+                EditorUtility.SetDirty(container);
             }
 
             AssetDatabase.SaveAssets();
