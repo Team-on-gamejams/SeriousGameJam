@@ -819,21 +819,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 286834220}
     m_Modifications:
-    - target: {fileID: 2256671706253428449, guid: 797162d4b79f9a147b58ae4c924f4def,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256671706253428449, guid: 797162d4b79f9a147b58ae4c924f4def,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.41960788
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256671706253428449, guid: 797162d4b79f9a147b58ae4c924f4def,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.41960788
-      objectReference: {fileID: 0}
     - target: {fileID: 2959338338264241154, guid: 797162d4b79f9a147b58ae4c924f4def,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1784,36 +1769,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5276672862861955139, guid: e6a13db171acf2d499189c705ccf90f9,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5276672862861955139, guid: e6a13db171acf2d499189c705ccf90f9,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5276672862861955139, guid: e6a13db171acf2d499189c705ccf90f9,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5276672862861955139, guid: e6a13db171acf2d499189c705ccf90f9,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5276672862861955139, guid: e6a13db171acf2d499189c705ccf90f9,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5276672862861955139, guid: e6a13db171acf2d499189c705ccf90f9,
-        type: 3}
-      propertyPath: m_TextStyleHashCode
-      value: -1183493901
-      objectReference: {fileID: 0}
     - target: {fileID: 5276672864813567012, guid: e6a13db171acf2d499189c705ccf90f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2013,8 +1968,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 321947206}
   m_HandleRect: {fileID: 321947205}
   m_Direction: 2
-  m_Value: 0.9999999
-  m_Size: 0.43724766
+  m_Value: 0.9999998
+  m_Size: 0.48115548
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2305,11 +2260,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 286834220}
     m_Modifications:
-    - target: {fileID: 1660522889820172477, guid: cf01b52214af675498990d28c42d4d58,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4763209457192158206, guid: cf01b52214af675498990d28c42d4d58,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2449,11 +2399,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8864472889597650144, guid: cf01b52214af675498990d28c42d4d58,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf01b52214af675498990d28c42d4d58, type: 3}
@@ -3082,11 +3027,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5276672862861955139, guid: 47e4082f429df284098086c51dd0235a,
-        type: 3}
-      propertyPath: m_TextStyleHashCode
-      value: -1183493901
-      objectReference: {fileID: 0}
     - target: {fileID: 5276672864813567012, guid: 47e4082f429df284098086c51dd0235a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3480,8 +3420,8 @@ MonoBehaviour:
   buttonAppear: {fileID: 8300000, guid: 1bbd90ee4ffae5f418ef4d0f0f349d77, type: 3}
   buttonAppearVolume: 0.5
   patients:
-  - {fileID: 11400000, guid: a9e60f230b53ebc40bc42221724085ef, type: 2}
   - {fileID: 11400000, guid: ced0a2679ad09d24499e982c77a09bca, type: 2}
+  - {fileID: 11400000, guid: a9e60f230b53ebc40bc42221724085ef, type: 2}
   operatorName: Operator
   dialogLog: {fileID: 1259861698}
   dialogSelect: {fileID: 836591695}
@@ -3765,36 +3705,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5276672862861955139, guid: e6a13db171acf2d499189c705ccf90f9,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5276672862861955139, guid: e6a13db171acf2d499189c705ccf90f9,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5276672862861955139, guid: e6a13db171acf2d499189c705ccf90f9,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5276672862861955139, guid: e6a13db171acf2d499189c705ccf90f9,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5276672862861955139, guid: e6a13db171acf2d499189c705ccf90f9,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5276672862861955139, guid: e6a13db171acf2d499189c705ccf90f9,
-        type: 3}
-      propertyPath: m_TextStyleHashCode
-      value: -1183493901
       objectReference: {fileID: 0}
     - target: {fileID: 5276672864813567012, guid: e6a13db171acf2d499189c705ccf90f9,
         type: 3}
@@ -4379,11 +4289,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5276672862861955139, guid: e6a13db171acf2d499189c705ccf90f9,
-        type: 3}
-      propertyPath: m_TextStyleHashCode
-      value: -1183493901
       objectReference: {fileID: 0}
     - target: {fileID: 5276672864813567012, guid: e6a13db171acf2d499189c705ccf90f9,
         type: 3}
