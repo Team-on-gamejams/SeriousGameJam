@@ -906,7 +906,7 @@ PrefabInstance:
     - target: {fileID: 4763209457192158206, guid: 797162d4b79f9a147b58ae4c924f4def,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 354.9602
       objectReference: {fileID: 0}
     - target: {fileID: 4763209457192158206, guid: 797162d4b79f9a147b58ae4c924f4def,
         type: 3}
@@ -1099,17 +1099,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "<b>1. Connect</b>\r\nWhoever that you try to communicate with and in whichever
-    way; you must connect with them on some level in order to get the message across.\r\n
-    \r\n<b>2. Listen more.</b>\r\nListening means to enter into the world of the
-    other person, to intend to understand them, even if we disagree with what they
-    are saying.\r\n\r\n<b>3.Make sure you are understood.</b>\r\nDon\u2019t blame
-    the other person for not understanding. Instead, look for ways to clarify or
-    rephrase what you are trying to say so it can be understood.\r\n\n<b>4. Understand
-    needs, wishes and values.</b>\r\nWe can learn to identify and \u2018hear\u2019
-    these needs, even when they are not expressed explicitly. Because all beings
-    share these needs, they are our magic key to unlocking mutual understanding.\r\n\n<b>5.
-    Adapt your message</b>\r\nAdapt it so that it makes sense to them and that they
-    can relate to what you\u2019re saying.\r\n"
+    way; you must connect with them on some level in order to get the message across.\r\n\r\n<b>2.
+    Listen more.</b>\r\nListening means to enter into the world of the other person,
+    to intend to understand them, even if we disagree with what they are saying.\r\n\r\n<b>3.Make
+    sure you are understood.</b>\r\nDon\u2019t blame the other person for not understanding.
+    Instead, look for ways to clarify or rephrase what you are trying to say so it
+    can be understood.\r\n\n<b>4. Understand needs, wishes and values.</b>\r\nWe
+    can learn to identify and \u2018hear\u2019 these needs, even when they are not
+    expressed explicitly. Because all beings share these needs, they are our magic
+    key to unlocking mutual understanding.\r\n\n<b>5. Adapt your message</b>\r\nAdapt
+    it so that it makes sense to them and that they can relate to what you\u2019re
+    saying.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2321,7 +2321,7 @@ PrefabInstance:
     - target: {fileID: 4763209457192158206, guid: cf01b52214af675498990d28c42d4d58,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 709.9204
       objectReference: {fileID: 0}
     - target: {fileID: 4763209457192158206, guid: cf01b52214af675498990d28c42d4d58,
         type: 3}
@@ -2933,7 +2933,7 @@ PrefabInstance:
     - target: {fileID: 4763209457192158206, guid: 797162d4b79f9a147b58ae4c924f4def,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 354.9602
       objectReference: {fileID: 0}
     - target: {fileID: 4763209457192158206, guid: 797162d4b79f9a147b58ae4c924f4def,
         type: 3}
@@ -3614,7 +3614,7 @@ PrefabInstance:
     - target: {fileID: 4763209457192158206, guid: 797162d4b79f9a147b58ae4c924f4def,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 354.9602
       objectReference: {fileID: 0}
     - target: {fileID: 4763209457192158206, guid: 797162d4b79f9a147b58ae4c924f4def,
         type: 3}
@@ -4472,7 +4472,7 @@ PrefabInstance:
     - target: {fileID: 4763209457192158206, guid: 43ee1f743243cc94c9005d8fe2a2e115,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 354.9602
       objectReference: {fileID: 0}
     - target: {fileID: 4763209457192158206, guid: 43ee1f743243cc94c9005d8fe2a2e115,
         type: 3}

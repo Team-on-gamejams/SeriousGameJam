@@ -16,14 +16,11 @@ MonoBehaviour:
   - BaseNodeGUID: 8430c174-fdd7-45db-ba92-3d295e4285e7
     PortName: Next
     TargetNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
-  - BaseNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
-    PortName: Hope that my help was usefull
-    TargetNodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
-  - BaseNodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
-    PortName: Hope that my help was usefull
-    TargetNodeGUID: 359adee4-113c-4abc-b4d8-e9239af3f5cd
   - BaseNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
     PortName: Please continue.
+    TargetNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
+  - BaseNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
+    PortName: Your problem is somewhat connected to school?
     TargetNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
   - BaseNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
     PortName: Yes, how can I help you?
@@ -31,12 +28,12 @@ MonoBehaviour:
   - BaseNodeGUID: 6cab542b-9bea-4f57-b736-0a75f7a08c33
     PortName: What happened?
     TargetNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
-  - BaseNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
-    PortName: Your problem is somewhat connected to school?
-    TargetNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
   - BaseNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
     PortName: Do you have any friends? Maybe tell something about them
     TargetNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
+  - BaseNodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
+    PortName: Hope that my help was usefull
+    TargetNodeGUID: 359adee4-113c-4abc-b4d8-e9239af3f5cd
   - BaseNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
     PortName: You need to analyze the behavior of your friends. And it will become
       obvious to You that they only use You and make fun of You.Not giving anything
@@ -45,26 +42,24 @@ MonoBehaviour:
   - BaseNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
     PortName: You just need to help them and they will help you
     TargetNodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
+  - BaseNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
+    PortName: Hope that my help was usefull
+    TargetNodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
   DialogueNodeData:
-  - NodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
-    DialogueText: I am goblin.My name is Grim Brimdal but others call me Grim Bin.I
-      am studying in grade 10 in school for Orcs and Goblins.
-    mood: angry
-    Position: {x: 836, y: 160}
   - NodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
     DialogueText: Is this a helpline?
-    mood: angry
+    mood: doubt
     Position: {x: 133, y: 331}
   - NodeGUID: 6cab542b-9bea-4f57-b736-0a75f7a08c33
     DialogueText: I need help.
-    mood: angry
+    mood: normal
     Position: {x: 513, y: 346}
   - NodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
     DialogueText: Well it all began from elementary school.At that point i knew i'll
       be an engineer.I never liked anything that my peers liked and I was not too
       talkative.And my nose is too big even for the goblins standards.And i don't
       know why but i feel that something is wrong.
-    mood: no
+    mood: normal
     Position: {x: 1770, y: 151}
   - NodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
     DialogueText: <b>Actially it doen't help at all</b>
@@ -78,13 +73,18 @@ MonoBehaviour:
     DialogueText: Thanks for the advice I will try.
     mood: normal
     Position: {x: 4337, y: 465}
-  - NodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
-    DialogueText: I mostly work with friends on their school work.
-    mood: normal
-    Position: {x: 3120, y: 278}
   - NodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
     DialogueText: Thanks for the advice I will try.
     mood: normal
     Position: {x: 4293, y: 111}
+  - NodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
+    DialogueText: I am goblin.My name is Grim Brimdal but others call me Grim Bin.I
+      am studying in grade 10 in school for Orcs and Goblins.
+    mood: normal
+    Position: {x: 835, y: 160}
+  - NodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
+    DialogueText: I mostly work with friends on their school work.
+    mood: doubt
+    Position: {x: 3117, y: 277}
   ExposedProperties: []
   CommentBlockData: []

@@ -98,13 +98,9 @@ namespace UnityConstants
     public static class Scenes
     {
         /// <summary>
-        /// ID of scene 'MainMenu'.
-        /// </summary>
-        public const int MainMenu = 0;
-        /// <summary>
         /// ID of scene 'SampleScene2D'.
         /// </summary>
-        public const int SampleScene2D = 1;
+        public const int SampleScene2D = 0;
     }
 
     public static class Axes

@@ -16,27 +16,27 @@ MonoBehaviour:
   - mood: 0
     backColor: {r: 1, g: 1, b: 1, a: 1}
     avatar: {fileID: 21300000, guid: 47314718d5b05704191fcd9856e9803a, type: 3}
-    animationSpine: {fileID: 11400000, guid: 28343c7efc9d99b49ae1024406a8d4bf, type: 2}
+    animationSpine: {fileID: 11400000, guid: 1e55a0f5497ab6148a0d2557fd675a7b, type: 2}
   - mood: 1
     backColor: {r: 1, g: 1, b: 1, a: 1}
     avatar: {fileID: 21300000, guid: 47314718d5b05704191fcd9856e9803a, type: 3}
-    animationSpine: {fileID: 11400000, guid: 28343c7efc9d99b49ae1024406a8d4bf, type: 2}
+    animationSpine: {fileID: 11400000, guid: 71199716d802b324ab36f3e0b1029c21, type: 2}
   - mood: 2
     backColor: {r: 1, g: 1, b: 1, a: 1}
     avatar: {fileID: 21300000, guid: 47314718d5b05704191fcd9856e9803a, type: 3}
-    animationSpine: {fileID: 11400000, guid: e14165ed2e81fcb4b8b0a22f02cc5e25, type: 2}
+    animationSpine: {fileID: 11400000, guid: e41ef3f9785c11d4e8002b774955d587, type: 2}
   - mood: 250
     backColor: {r: 0.42041725, g: 1, b: 0.4198113, a: 1}
     avatar: {fileID: 21300000, guid: 47314718d5b05704191fcd9856e9803a, type: 3}
-    animationSpine: {fileID: 11400000, guid: af38aa22df3f29e49a5774ecf42864d5, type: 2}
+    animationSpine: {fileID: 11400000, guid: 71199716d802b324ab36f3e0b1029c21, type: 2}
   - mood: 251
     backColor: {r: 1, g: 0.41960788, b: 0.41960788, a: 1}
     avatar: {fileID: 21300000, guid: 47314718d5b05704191fcd9856e9803a, type: 3}
-    animationSpine: {fileID: 11400000, guid: e14165ed2e81fcb4b8b0a22f02cc5e25, type: 2}
+    animationSpine: {fileID: 11400000, guid: e41ef3f9785c11d4e8002b774955d587, type: 2}
   - mood: 3
     backColor: {r: 1, g: 1, b: 1, a: 1}
     avatar: {fileID: 21300000, guid: 47314718d5b05704191fcd9856e9803a, type: 3}
-    animationSpine: {fileID: 11400000, guid: 533102b1436f8b6429034f740f6c7c59, type: 2}
+    animationSpine: {fileID: 11400000, guid: db52025b8d3d1bf42bc23dfcfb159a1f, type: 2}
   name: Grim Bin
   dialogue: {fileID: 11400000, guid: fac3d6725958945428e31297348d89d4, type: 2}
-  skeletonDataAsset: {fileID: 0}
+  skeletonDataAsset: {fileID: 11400000, guid: 2ac5f95ab6f66b74e827bffa69b624fb, type: 2}
