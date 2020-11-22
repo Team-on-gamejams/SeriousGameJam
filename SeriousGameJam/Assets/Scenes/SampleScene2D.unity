@@ -3480,9 +3480,8 @@ MonoBehaviour:
   buttonAppear: {fileID: 8300000, guid: 1bbd90ee4ffae5f418ef4d0f0f349d77, type: 3}
   buttonAppearVolume: 0.5
   patients:
-  - {fileID: 11400000, guid: ced0a2679ad09d24499e982c77a09bca, type: 2}
   - {fileID: 11400000, guid: a9e60f230b53ebc40bc42221724085ef, type: 2}
-  - {fileID: 11400000, guid: 18ed213110c246749af3a65260414991, type: 2}
+  - {fileID: 11400000, guid: ced0a2679ad09d24499e982c77a09bca, type: 2}
   operatorName: Operator
   dialogLog: {fileID: 1259861698}
   dialogSelect: {fileID: 836591695}

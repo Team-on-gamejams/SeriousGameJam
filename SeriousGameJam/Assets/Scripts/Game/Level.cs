@@ -5,6 +5,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using NaughtyAttributes;
 using Subtegral.DialogueSystem.DataContainers;
 
 public class Level : MonoBehaviour {
@@ -21,7 +22,7 @@ public class Level : MonoBehaviour {
 	[SerializeField] float buttonAppearVolume = 0.5f;
 
 	[Header("Data"), Space]
-	[SerializeField] PatientData[] patients;
+	[ReorderableList] [SerializeField] PatientData[] patients;
 	[SerializeField] string operatorName = "Operator";
 
 	[Header("Refs"), Space]

@@ -45,7 +45,9 @@ public class DialogLogEntry : MonoBehaviour {
 		back.color = backColor;
 
 		spineParent.gameObject.SetActive(true);
+		spineSkeleton.Clear();
 		spineSkeleton.skeletonDataAsset = skeletonDataAsset;
+		spineSkeleton.Initialize(true);
 		spineSkeleton.AnimationState.SetAnimation(0, animation, true);
 	}
 
