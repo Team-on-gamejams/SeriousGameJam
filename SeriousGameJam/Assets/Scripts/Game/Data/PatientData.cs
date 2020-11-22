@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Spine.Unity;
 using Subtegral.DialogueSystem.DataContainers;
 
 [CreateAssetMenu(fileName = "Patient", menuName = "Data/Patient Data")]
@@ -10,6 +11,7 @@ public class PatientData : ScriptableObject {
 	[Space]
 	public string name;
 	public DialogueContainer dialogue;
+	public SkeletonDataAsset skeletonDataAsset;
 	PatientMood mood = PatientMood.Normal;
 
 	public PatientMoodData GetMoodData(string str) {
@@ -20,8 +22,22 @@ public class PatientData : ScriptableObject {
 			case "angry":
 				mood = PatientMood.Angry;
 				break;
+			case "doubts":
+			case "doubt":
+				mood = PatientMood.Doubt;
+				break;
+			case "no":
+				mood = PatientMood.No;
+				break;
 			case "exit":
-				mood = PatientMood.Exit;
+			case "exitok":
+				mood = PatientMood.ExitOk;
+				break;
+			case "exitno":
+			case "exitnot":
+			case "exitnook":
+			case "exitnotok":
+				mood = PatientMood.ExitNotOK;
 				break;
 		}
 
@@ -43,7 +59,10 @@ public class PatientData : ScriptableObject {
 	[Serializable]
 	public struct PatientMoodData{
 		public PatientMood mood;
-		public Sprite avatar;
 		public Color backColor;
+		[Space]
+		public Sprite avatar;
+		[Space]
+		public AnimationReferenceAsset animationSpine;
 	}
 }
