@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1075b2fe5184bf5448d35c3fd9bfdafa, type: 3}
+  m_Name: PatientTroll
+  m_EditorClassIdentifier: 
+  moodData:
+  - mood: 0
+    backColor: {r: 1, g: 1, b: 1, a: 1}
+    avatar: {fileID: 0}
+    animationSpine: {fileID: 11400000, guid: 28343c7efc9d99b49ae1024406a8d4bf, type: 2}
+  - mood: 1
+    backColor: {r: 1, g: 1, b: 1, a: 1}
+    avatar: {fileID: 0}
+    animationSpine: {fileID: 11400000, guid: 28343c7efc9d99b49ae1024406a8d4bf, type: 2}
+  - mood: 2
+    backColor: {r: 1, g: 1, b: 1, a: 1}
+    avatar: {fileID: 0}
+    animationSpine: {fileID: 11400000, guid: e14165ed2e81fcb4b8b0a22f02cc5e25, type: 2}
+  - mood: 250
+    backColor: {r: 0.42041725, g: 1, b: 0.4198113, a: 1}
+    avatar: {fileID: 0}
+    animationSpine: {fileID: 11400000, guid: af38aa22df3f29e49a5774ecf42864d5, type: 2}
+  - mood: 251
+    backColor: {r: 1, g: 0.41960788, b: 0.41960788, a: 1}
+    avatar: {fileID: 0}
+    animationSpine: {fileID: 11400000, guid: e14165ed2e81fcb4b8b0a22f02cc5e25, type: 2}
+  - mood: 3
+    backColor: {r: 1, g: 1, b: 1, a: 1}
+    avatar: {fileID: 0}
+    animationSpine: {fileID: 11400000, guid: 533102b1436f8b6429034f740f6c7c59, type: 2}
+  name: Troll
+  dialogue: {fileID: 11400000, guid: 8e16d9f7d618b9c4282b91bf935de8fb, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 054c5dc66ce19b5429199ca4bf453bfc, type: 2}
