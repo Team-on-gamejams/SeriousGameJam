@@ -28,7 +28,7 @@ SpriteAtlas:
       m_TextureFormat: -1
       m_TextureCompression: 1
       m_CompressionQuality: 50
-      m_CrunchedCompression: 0
+      m_CrunchedCompression: 1
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
       m_AndroidETC2FallbackOverride: 0
@@ -48,28 +48,26 @@ SpriteAtlas:
   m_PackedSprites:
   - {fileID: 21300000, guid: 99072bc03f33ba74cb7a412806cf44ce, type: 3}
   - {fileID: 21300000, guid: 4c4d39b12efa27448a471391dc1ae002, type: 3}
+  - {fileID: 21300000, guid: 9c643bb3260f509499c161c2aacfbce0, type: 3}
   - {fileID: 21300000, guid: 591413e48887cc3488bd0c0a5f75d6f9, type: 3}
-  - {fileID: 21300000, guid: ed808e87f73726d45993e99cf7a1071c, type: 3}
   - {fileID: 21300000, guid: 3b6a8228b6753334c9536c5d4d594a64, type: 3}
   - {fileID: 21300000, guid: 1738c3289bff15142b493b602ab4ad39, type: 3}
   - {fileID: 21300000, guid: 85c66098d1c0cae4a8854efca863f759, type: 3}
+  - {fileID: 21300000, guid: 371f23d93399737438656d9f266f67b2, type: 3}
   - {fileID: 21300000, guid: 6bffef5a7074bc84eb524c3cc115294f, type: 3}
   - {fileID: 21300000, guid: 6cde27ab0bf195e40a47b615a4060123, type: 3}
-  - {fileID: 21300000, guid: 3c94532ca9b7c2443b24645e1aed472d, type: 3}
-  - {fileID: 21300000, guid: ddb28e2cf6bc8124d82eddae24eb8102, type: 3}
-  - {fileID: 21300000, guid: e4314f6d5c515024c8861ecd01cea4d3, type: 3}
+  - {fileID: 21300000, guid: 56f4f93edeb30f545933bd0793bd54da, type: 3}
   m_PackedSpriteNamesToIndex:
   - answer_button_300x70
   - 'right_pop_up_bubble_thick_edge_300x70 '
+  - Right_window_531x746
   - Exit_button_84x84
-  - Right_window_bg_480x879
   - Foreground
   - Off_button_214x84
   - left_pop_up_bubble_thick_edge_300x70
+  - Left_window_480x879
   - On_button_214x84
   - Background
-  - Phone
-  - Center_window_bg_754x546
-  - Left_window_bg_479x834
+  - Center_window_802x685
   m_Tag: UIAtlas
   m_IsVariant: 0
