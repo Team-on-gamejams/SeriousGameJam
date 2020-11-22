@@ -84,7 +84,7 @@ MonoBehaviour:
       needGamejolthPush: 0
       needSteamPush: 0
       needGoogleDrivePush: 0
-    - isEnabled: 1
+    - isEnabled: 0
       outputRoot: Builds/
       middlePath: $NAME_$PLATFORM/$NAME/$NAME$EXECUTABLE
       isPassbyBuild: 0
@@ -221,7 +221,7 @@ MonoBehaviour:
       needGamejolthPush: 0
       needSteamPush: 0
       needGoogleDrivePush: 0
-    - isEnabled: 1
+    - isEnabled: 0
       outputRoot: Builds/
       middlePath: $NAME_$PLATFORM/$NAME/$NAME$EXECUTABLE
       isPassbyBuild: 0
@@ -358,7 +358,7 @@ MonoBehaviour:
       needGamejolthPush: 0
       needSteamPush: 0
       needGoogleDrivePush: 0
-    - isEnabled: 1
+    - isEnabled: 0
       outputRoot: Builds/Releases/
       middlePath: $NAME_$VERSION_$PLATFORM/$NAME_$VERSION/$NAME$EXECUTABLE
       isPassbyBuild: 1
@@ -495,7 +495,7 @@ MonoBehaviour:
       needGamejolthPush: 0
       needSteamPush: 0
       needGoogleDrivePush: 0
-    - isEnabled: 1
+    - isEnabled: 0
       outputRoot: Builds/Releases/
       middlePath: $NAME_$VERSION_$PLATFORM/$NAME_$VERSION/$NAME$EXECUTABLE
       isPassbyBuild: 0
@@ -632,7 +632,7 @@ MonoBehaviour:
       needGamejolthPush: 0
       needSteamPush: 0
       needGoogleDrivePush: 0
-    - isEnabled: 1
+    - isEnabled: 0
       outputRoot: Builds/Releases/
       middlePath: $NAME_$VERSION_$PLATFORM/$NAME_$VERSION/$NAME$EXECUTABLE
       isPassbyBuild: 0
@@ -769,7 +769,7 @@ MonoBehaviour:
       needGamejolthPush: 0
       needSteamPush: 0
       needGoogleDrivePush: 0
-    - isEnabled: 1
+    - isEnabled: 0
       outputRoot: Builds/Releases/
       middlePath: $NAME_$VERSION_$PLATFORM/$NAME_$VERSION/$NAME$EXECUTABLE
       isPassbyBuild: 0
