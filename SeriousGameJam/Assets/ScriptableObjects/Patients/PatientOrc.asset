@@ -14,27 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moodData:
   - mood: 0
-    backColor: {r: 0.06227949, g: 0.26415092, b: 0, a: 1}
+    backColor: {r: 0.31343734, g: 0.6886792, b: 0, a: 1}
     avatar: {fileID: 0}
     animationSpine: {fileID: 11400000, guid: 8047788180922d540b3f31bd5b909c5d, type: 2}
   - mood: 1
-    backColor: {r: 0.06227949, g: 0.26415092, b: 0, a: 1}
+    backColor: {r: 0.31343734, g: 0.6886792, b: 0, a: 1}
     avatar: {fileID: 0}
     animationSpine: {fileID: 11400000, guid: 29ff9ec9efa5c0a44ad64e9066ce6f8f, type: 2}
   - mood: 2
-    backColor: {r: 0.06227949, g: 0.26415092, b: 0, a: 1}
+    backColor: {r: 0.31343734, g: 0.6886792, b: 0, a: 1}
     avatar: {fileID: 0}
     animationSpine: {fileID: 11400000, guid: 6c03e38fb35ae71419eafc9a0a04e6ca, type: 2}
   - mood: 250
-    backColor: {r: 0.06227949, g: 0.26415092, b: 0, a: 1}
+    backColor: {r: 0.31343734, g: 0.6886792, b: 0, a: 1}
     avatar: {fileID: 0}
     animationSpine: {fileID: 11400000, guid: 8047788180922d540b3f31bd5b909c5d, type: 2}
   - mood: 251
-    backColor: {r: 0.2627451, g: 0.00525382, b: 0, a: 1}
+    backColor: {r: 0.6901961, g: 0.0059645646, b: 0, a: 1}
     avatar: {fileID: 0}
     animationSpine: {fileID: 11400000, guid: 6c03e38fb35ae71419eafc9a0a04e6ca, type: 2}
   - mood: 3
-    backColor: {r: 0.06227949, g: 0.26415092, b: 0, a: 1}
+    backColor: {r: 0.31343734, g: 0.6886792, b: 0, a: 1}
     avatar: {fileID: 0}
     animationSpine: {fileID: 11400000, guid: e431f58fd2e196d4092a2c85d9280a81, type: 2}
   name: "\u0414\u043E\u0431\u0440\u044B\u0439 \u041E\u0440\u043A"
