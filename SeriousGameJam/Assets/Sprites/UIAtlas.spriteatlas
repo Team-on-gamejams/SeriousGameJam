@@ -58,7 +58,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 371f23d93399737438656d9f266f67b2, type: 3}
   - {fileID: 21300000, guid: 6bffef5a7074bc84eb524c3cc115294f, type: 3}
   - {fileID: 21300000, guid: 6cde27ab0bf195e40a47b615a4060123, type: 3}
-  - {fileID: 21300000, guid: 799c83fcd6c410142a5645601d853eef, type: 3}
   - {fileID: 21300000, guid: 56f4f93edeb30f545933bd0793bd54da, type: 3}
   - {fileID: 21300000, guid: 254a427f3a709b245993ce89054d8b5b, type: 3}
   - {fileID: 21300000, guid: 00201f7f33e0eab4b87e57fa4ef7c591, type: 3}
@@ -75,7 +74,6 @@ SpriteAtlas:
   - Left_window_480x879
   - On_button_214x84
   - Background
-  - pop_up_message
   - Center_window_802x685
   - Client_icon_border
   - AnonimAvatar
