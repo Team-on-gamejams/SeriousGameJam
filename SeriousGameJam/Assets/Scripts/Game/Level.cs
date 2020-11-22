@@ -13,10 +13,15 @@ public class Level : MonoBehaviour {
 	[SerializeField] AudioClip winAmbient;
 	[SerializeField] AudioClip loseAmbient;
 
+	[Header("Sounds"), Space]
+	[SerializeField] AudioClip patientWriteSound;
+	[SerializeField] AudioClip systemMessageSound;
+	[SerializeField] AudioClip callSound;
+
 
 	[Header("Data"), Space]
-	string operatorName = "Operator";
 	[SerializeField] PatientData[] patients;
+	[SerializeField] string operatorName = "Operator";
 
 	[Header("Refs"), Space]
 	[SerializeField] DialogLogUI dialogLog;
@@ -29,8 +34,9 @@ public class Level : MonoBehaviour {
 
 	void Start() {
 		dialogSelect.ClearForce();
+		dialogLog.ClearLog();
 
-		StartNewPatient();
+		LeanTween.delayedCall(gameObject, 1.5f, StartNewPatient);
 	}
 
 	void StartNewPatient() {
@@ -43,8 +49,13 @@ public class Level : MonoBehaviour {
 		AudioManager.Instance.PlayMusic(defaultAmbient);
 		currPatient = Instantiate(patients[currPatientId]);
 
+		AudioSource callAS = AudioManager.Instance.PlayLoop(callSound, 0.15f);
+		AudioManager.Instance.Play(systemMessageSound);
 		dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Вам звонить {currPatient.name}", onShowLog: ()=> {
 			dialogSelect.AddButton("start", () => {
+				AudioManager.Instance.ChangeASVolume(callAS, 0.0f, 0.25f);
+				Destroy(callAS.gameObject, 1.0f);
+
 				dialogSelect.Clear();
 				NodeLinkData narrativeData = currPatient.dialogue.NodeLinks.First(); //Entrypoint node
 				ProceedToNarrative(narrativeData.TargetNodeGUID);
@@ -68,7 +79,9 @@ public class Level : MonoBehaviour {
 			LeanTween.delayedCall(winAmbient.length - AudioManager.Instance.crossfadeTime, AudioManager.Instance.ContinueMusicAfterMute);
 		}
 
-		dialogLog.AddToLog(DialogLogUI.LogEntryType.Patient, ProcessProperties(text), currPatient.name, mood.backColor, currPatient, mood, () => {
+		dialogLog.AddToLog(DialogLogUI.LogEntryType.Patient, ProcessProperties(text), currPatient.name, mood.backColor, currPatient, mood, ()=> { 
+			AudioManager.Instance.Play(patientWriteSound, 0.5f);
+		}, () => {
 			foreach (var choice in choices) {
 				string choiceText = ProcessProperties(choice.PortName);
 
@@ -103,6 +116,7 @@ public class Level : MonoBehaviour {
 		++currPatientId;
 		if (currPatientId == patients.Length) {
 			dialogLog.ClearLog();
+			AudioManager.Instance.Play(systemMessageSound);
 			dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Ви пройшли гру! Конгарц", onShowLog: () => {
 				dialogSelect.AddButton("gameover", () => {
 					currPatientId = 0;
@@ -111,6 +125,7 @@ public class Level : MonoBehaviour {
 			});
 		}
 		else {
+			AudioManager.Instance.Play(systemMessageSound);
 			dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Розмова закiнчена", onShowLog: ()=> {
 				dialogSelect.AddButton("end", () => {
 					StartNewPatient();

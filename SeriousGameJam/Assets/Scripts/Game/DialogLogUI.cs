@@ -30,7 +30,7 @@ public class DialogLogUI : MonoBehaviour {
 	List<DialogLogEntry> entries = new List<DialogLogEntry>();
 	PatientTypingEntry patientTyping;
 
-	public void AddToLog(LogEntryType type, string text, string name = "", Color backColor = default, PatientData patientData = null, PatientData.PatientMoodData moodData = default, Action onShowLog = null, float minTimeToCallShow = 0.0f) {
+	public void AddToLog(LogEntryType type, string text, string name = "", Color backColor = default, PatientData patientData = null, PatientData.PatientMoodData moodData = default, Action beforeStartScroll = null, Action onShowLog = null, float minTimeToCallShow = 0.0f) {
 		if (type == LogEntryType.Patient) {
 			GameObject typingGO = Instantiate(patientTypingPrefab, layoutGroup.transform);
 			patientTyping = typingGO.GetComponent<PatientTypingEntry>();
@@ -40,14 +40,15 @@ public class DialogLogUI : MonoBehaviour {
 
 			float delay = dotsAnimLenghtRange.GetRandomValueFloat();
 			LeanTween.delayedCall(delay, ()=> {
+				beforeStartScroll?.Invoke();
 				Destroy(patientTyping.gameObject);
 				AddToLogImmediatly();
 			});
 		}
 		else {
+			beforeStartScroll?.Invoke();
 			AddToLogImmediatly();
 		}
-
 
 		void AddToLogImmediatly() {
 			GameObject entryGO;

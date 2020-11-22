@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class PlayOnClick : MonoBehaviour {
 	[SerializeField] AudioClip clip; 
 	[SerializeField] Button button;
+	[SerializeField] float volume = 1.0f;
 
 #if UNITY_EDITOR
 	private void OnValidate() {
@@ -25,6 +26,6 @@ public class PlayOnClick : MonoBehaviour {
 	}
 
 	void OnClick() {
-		AudioManager.Instance.Play(clip, channel: AudioManager.AudioChannel.Sound);
+		AudioManager.Instance.Play(clip, volume, channel: AudioManager.AudioChannel.Sound);
 	}
 }
