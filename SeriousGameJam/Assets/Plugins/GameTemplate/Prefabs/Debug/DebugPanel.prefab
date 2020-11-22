@@ -710,7 +710,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2523450297823009742}
   - component: {fileID: 1732188410764803107}
-  - component: {fileID: 8258720778741578552}
   m_Layer: 0
   m_Name: Video
   m_TagString: Untagged
@@ -745,37 +744,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa7b6285563d71048a2a5a3e41e89081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frameSize: 4
   isOfflineRenderer: 0
-  encodeQuality: 1
-  antiAliasing: 1
-  targetFramerate: 2
   startVideoKey: 282
   pauseVideoKey: 283
   stopVideoKey: 284
   openVideoFolderKey: 285
   recordingImg: {fileID: 8726537025630821292}
   recordingText: {fileID: 5205510685080481948}
-  videoCaptureCtrl: {fileID: 8258720778741578552}
---- !u!114 &8258720778741578552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7940498895228507413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ce1c4f59cc9242fd926bcc78fcf4ab9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debug: 0
-  startOnAwake: 0
-  captureTime: 300
-  quitAfterCapture: 0
-  _videoCaptures:
-  - {fileID: 0}
-  _audioCapture: {fileID: 0}
 --- !u!1 &8204390095441640616
 GameObject:
   m_ObjectHideFlags: 0
