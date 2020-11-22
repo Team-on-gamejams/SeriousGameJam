@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1075b2fe5184bf5448d35c3fd9bfdafa, type: 3}
+  m_Name: PatientOrc 1
+  m_EditorClassIdentifier: 
+  moodData:
+  - mood: 0
+    backColor: {r: 0.31343734, g: 0.6886792, b: 0, a: 1}
+    avatar: {fileID: 0}
+    animationSpine: {fileID: 11400000, guid: 8047788180922d540b3f31bd5b909c5d, type: 2}
+  - mood: 1
+    backColor: {r: 0.31343734, g: 0.6886792, b: 0, a: 1}
+    avatar: {fileID: 0}
+    animationSpine: {fileID: 11400000, guid: 29ff9ec9efa5c0a44ad64e9066ce6f8f, type: 2}
+  - mood: 2
+    backColor: {r: 0.31343734, g: 0.6886792, b: 0, a: 1}
+    avatar: {fileID: 0}
+    animationSpine: {fileID: 11400000, guid: 6c03e38fb35ae71419eafc9a0a04e6ca, type: 2}
+  - mood: 250
+    backColor: {r: 0.31343734, g: 0.6886792, b: 0, a: 1}
+    avatar: {fileID: 0}
+    animationSpine: {fileID: 11400000, guid: 8047788180922d540b3f31bd5b909c5d, type: 2}
+  - mood: 251
+    backColor: {r: 0.6901961, g: 0.0059645646, b: 0, a: 1}
+    avatar: {fileID: 0}
+    animationSpine: {fileID: 11400000, guid: 6c03e38fb35ae71419eafc9a0a04e6ca, type: 2}
+  - mood: 3
+    backColor: {r: 0.31343734, g: 0.6886792, b: 0, a: 1}
+    avatar: {fileID: 0}
+    animationSpine: {fileID: 11400000, guid: e431f58fd2e196d4092a2c85d9280a81, type: 2}
+  name: "\u0414\u043E\u0431\u0440\u044B\u0439 \u041E\u0440\u043A"
+  dialogue: {fileID: 11400000, guid: 583de570c03dc2d43be239e716460f91, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: b786bbfedbadc9b40813500f75472a06, type: 2}

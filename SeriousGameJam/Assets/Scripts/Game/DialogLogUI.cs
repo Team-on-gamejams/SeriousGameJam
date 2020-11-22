@@ -70,11 +70,6 @@ public class DialogLogUI : MonoBehaviour {
 					break;
 			}
 
-			contentSizeFitter.enabled = false;
-			contentSizeFitter.SetLayoutVertical();
-			LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)entryGO.transform);
-			contentSizeFitter.enabled = true;
-
 			DialogLogEntry entry = entryGO.GetComponent<DialogLogEntry>();
 
 			if (patientData != null && patientData.skeletonDataAsset != null && moodData.animationSpine != null) {
@@ -89,6 +84,14 @@ public class DialogLogUI : MonoBehaviour {
 					entries[i].OnBecomeOld();
 			}
 			entries.Add(entry);
+
+			contentSizeFitter.enabled = false;
+			contentSizeFitter.SetLayoutVertical();
+			foreach (Transform child in entryGO.transform) {
+				LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)child.transform);
+			}
+			LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)entryGO.transform);
+			contentSizeFitter.enabled = true;
 
 			StartCoroutine(ScrollToBottom(onShowLog, minTimeToCallShow));
 		}
@@ -108,6 +111,16 @@ public class DialogLogUI : MonoBehaviour {
 		LeanTween.cancel(scroll.gameObject, true);
 		
 		yield return null;
+
+		GameObject entryGO = entries[entries.Count - 1].gameObject;
+		contentSizeFitter.enabled = false;
+		contentSizeFitter.SetLayoutVertical();
+		foreach (Transform child in entryGO.transform) {
+			LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)child.transform);
+		}
+		LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)entryGO.transform);
+		contentSizeFitter.enabled = true;
+
 		yield return null;
 
 		if (scroll.normalizedPosition == Vector2.zero) {
