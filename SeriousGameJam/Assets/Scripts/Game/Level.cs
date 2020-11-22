@@ -38,6 +38,7 @@ public class Level : MonoBehaviour {
 		dialogSelect.ClearForce();
 		dialogLog.ClearLog();
 
+		AudioManager.Instance.PlayMusic(defaultAmbient);
 		LeanTween.delayedCall(gameObject, 1.5f, StartNewPatient);
 	}
 
@@ -45,23 +46,21 @@ public class Level : MonoBehaviour {
 		//dialogLog.ClearLog();
 		dialogSelect.Clear();
 
-		if (winAmbientAS) {
-			AudioManager.Instance.ChangeASVolume(winAmbientAS, 0.0f, 1.0f);
-		}
-		AudioManager.Instance.PlayMusic(defaultAmbient);
 		currPatient = Instantiate(patients[currPatientId]);
 
 		AudioSource callAS = AudioManager.Instance.PlayLoop(callSound, 0.15f);
 		AudioManager.Instance.Play(systemMessageSound);
 		dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Call with <i>{currPatient.name}</i> started", onShowLog: ()=> {
-			dialogSelect.AddButton("start", () => {
-				AudioManager.Instance.ChangeASVolume(callAS, 0.0f, 0.25f);
-				Destroy(callAS.gameObject, 1.0f);
+			
+		});
 
-				dialogSelect.Clear();
-				NodeLinkData narrativeData = currPatient.dialogue.NodeLinks.First(); //Entrypoint node
-				ProceedToNarrative(narrativeData.TargetNodeGUID);
-			});
+		dialogSelect.AddButton("start", () => {
+			AudioManager.Instance.ChangeASVolume(callAS, 0.0f, 0.25f);
+			Destroy(callAS.gameObject, 1.0f);
+
+			dialogSelect.Clear();
+			NodeLinkData narrativeData = currPatient.dialogue.NodeLinks.First(); //Entrypoint node
+			ProceedToNarrative(narrativeData.TargetNodeGUID);
 		});
 	}
 
@@ -117,27 +116,38 @@ public class Level : MonoBehaviour {
 	void EndPatient() {
 		dialogSelect.Clear();
 
-		++currPatientId;
-		if (currPatientId == patients.Length) {
-			dialogLog.ClearLog();
-			AudioManager.Instance.Play(systemMessageSound);
-			dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Thank you for playing the demo!", onShowLog: () => {
-				AudioManager.Instance.Play(buttonAppear, buttonAppearVolume);
-				dialogSelect.AddButton("gameover", () => {
-					currPatientId = 0;
-					StartNewPatient();
-				});
+		AudioManager.Instance.Play(systemMessageSound);
+		dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Call ended", onShowLog: () => {
+			AudioManager.Instance.Play(buttonAppear, buttonAppearVolume);
+			dialogSelect.AddButton("end", () => {
+
+				++currPatientId;
+				if (currPatientId == patients.Length) {
+					dialogSelect.Clear();
+					AudioManager.Instance.Play(systemMessageSound);
+					dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Thank you for playing the demo!", onShowLog: () => {
+						AudioManager.Instance.Play(buttonAppear, buttonAppearVolume);
+						dialogSelect.AddButton("gameover", () => {
+							currPatientId = 0;
+							dialogLog.ClearLog();
+							dialogSelect.Clear();
+							if (winAmbientAS) 
+								AudioManager.Instance.ChangeASVolume(winAmbientAS, 0.0f, 1.0f);
+							AudioManager.Instance.PlayMusic(defaultAmbient);
+							LeanTween.delayedCall(UnityEngine.Random.Range(1.0f, 2.5f), StartNewPatient);
+						});
+					});
+				}
+				else {
+					dialogSelect.Clear();
+					if (winAmbientAS) 
+						AudioManager.Instance.ChangeASVolume(winAmbientAS, 0.0f, 1.0f);
+					AudioManager.Instance.PlayMusic(defaultAmbient);
+					LeanTween.delayedCall(UnityEngine.Random.Range(1.0f, 2.5f), StartNewPatient);
+				}
+
 			});
-		}
-		else {
-			AudioManager.Instance.Play(systemMessageSound);
-			dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Call ended", onShowLog: ()=> {
-				AudioManager.Instance.Play(buttonAppear, buttonAppearVolume);
-				dialogSelect.AddButton("end", () => {
-					StartNewPatient();
-				});
-			});
-		}
+		});
 	}
 
 	string ProcessProperties(string processedText) {

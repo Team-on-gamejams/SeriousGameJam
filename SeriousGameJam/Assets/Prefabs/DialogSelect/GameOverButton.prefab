@@ -86,7 +86,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -98,9 +98,9 @@ MonoBehaviour:
   m_fontSizeMin: 1
   m_fontSizeMax: 26
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 514
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3494020e310f1494a88fae0a603d6d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textField: {fileID: 5276672862861955139}
+  textField: {fileID: 0}
   btn: {fileID: 5276672864813567015}
   anim: {fileID: 1052474930467429571}
 --- !u!114 &5276672864813567014
@@ -344,3 +344,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: fd07cd71db5b9ed47a651707a24a2f7a, type: 3}
   button: {fileID: 5276672864813567015}
+  volume: 1
