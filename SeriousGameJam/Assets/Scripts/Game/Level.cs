@@ -120,7 +120,7 @@ public class Level : MonoBehaviour {
 		if (currPatientId == patients.Length) {
 			dialogLog.ClearLog();
 			AudioManager.Instance.Play(systemMessageSound);
-			dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Ви пройшли гру! Конгарц", onShowLog: () => {
+			dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Thank you for playing the demo!", onShowLog: () => {
 				AudioManager.Instance.Play(buttonAppear, buttonAppearVolume);
 				dialogSelect.AddButton("gameover", () => {
 					currPatientId = 0;

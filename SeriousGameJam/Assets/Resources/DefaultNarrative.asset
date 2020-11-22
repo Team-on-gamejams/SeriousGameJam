@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78b3fd9154634ebdb8c8a48960b9a16a, type: 3}
-  m_Name: PatientNarrativeOrc
+  m_Name: DefaultNarrative
   m_EditorClassIdentifier: 
   NodeLinks:
   - BaseNodeGUID: 8430c174-fdd7-45db-ba92-3d295e4285e7
@@ -30,54 +30,80 @@ MonoBehaviour:
     PortName: You don't have to be afraid, it is very important to be yourself.
     TargetNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
   - BaseNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
-    PortName: Try to confess everything, honesty is the best policy.
-    TargetNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
-  - BaseNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
     PortName: 'When communicating with others, try to gradually introduce preferred
       manner of communication. '
     TargetNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
-  - BaseNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
-    PortName: Do you have close friends, relatives who already know about this?
-    TargetNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
-  - BaseNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
+  - BaseNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
     PortName: Try to confess everything, honesty is the best policy.
     TargetNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
-  - BaseNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
+  - BaseNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
+    PortName: Do you have close friends, relatives who already know about this?
+    TargetNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
+  - BaseNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
     PortName: 'When communicating with others, try to gradually introduce preferred
       manner of communication. '
     TargetNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
   - BaseNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
-    PortName: Yes, how can I help you?
-    TargetNodeGUID: 6cab542b-9bea-4f57-b736-0a75f7a08c33
-  - BaseNodeGUID: 6cab542b-9bea-4f57-b736-0a75f7a08c33
-    PortName: What happened?
-    TargetNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
+    PortName: Try to confess everything, honesty is the best policy.
+    TargetNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
+  - BaseNodeGUID: 5a7222dd-cbb2-4e32-a216-23fc28675744
+    PortName: Welcome to Aunt Margery's fantasy hotline, how can I help you?
+    TargetNodeGUID: 59ac6aa6-7039-4bc8-90c2-cc8a92bfdc9d
+  - BaseNodeGUID: 0d190038-03ad-4447-870d-a7320c1066c3
+    PortName: e to Aunt Margery's fantasy hotline, how can I help you?
+    TargetNodeGUID: 59ac6aa6-7039-4bc8-90c2-cc8a92bfdc9d
+  - BaseNodeGUID: 81738ae2-0db0-4337-8bb8-86096cc2ebb1
+    PortName: Yes, how can i help you?
+    TargetNodeGUID: 667e4481-4e08-4dbb-9dfb-654b03627076
+  - BaseNodeGUID: 81738ae2-0db0-4337-8bb8-86096cc2ebb1
+    PortName: Welcome to Aunt Margery's fantasy hotline, how can I help you?
+    TargetNodeGUID: 667e4481-4e08-4dbb-9dfb-654b03627076
   DialogueNodeData:
-  - NodeGUID: 359adee4-113c-4abc-b4d8-e9239af3f5cd
-    DialogueText: <b>Orc is happy</b>
-    mood: exitok
-    Position: {x: 6135, y: 246}
   - NodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
     DialogueText: 'How''s that? '
     mood: normal
-    Position: {x: 4589, y: 248}
+    Position: {x: 3821, y: 232}
   - NodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
     DialogueText: YES! You're right. I will do so.
     mood: normal
-    Position: {x: 4900, y: -264}
-  - NodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
-    DialogueText: <b>Orc was expelled from the clan</b>
-    mood: exitno
-    Position: {x: 5635, y: -263}
+    Position: {x: 4132, y: -280}
   - NodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
     DialogueText: Oh, I didn't think about that. I'll try.
     mood: normal
-    Position: {x: 5632, y: 249}
+    Position: {x: 4864, y: 233}
   - NodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
     DialogueText: No, I'm afraid to admit, I will be considered weak.
     mood: no
-    Position: {x: 3785, y: -282}
-  - NodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
+    Position: {x: 3006, y: -308}
+  - NodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
+    DialogueText: <b>Orc was expelled from the clan</b>
+    mood: exitno
+    Position: {x: 5517, y: -281}
+  - NodeGUID: 359adee4-113c-4abc-b4d8-e9239af3f5cd
+    DialogueText: <b>Orc is happy</b>
+    mood: exitok
+    Position: {x: 5634, y: 187}
+  - NodeGUID: 59ac6aa6-7039-4bc8-90c2-cc8a92bfdc9d
+    DialogueText: I need help.
+    mood: normal
+    Position: {x: 1379, y: -534}
+  - NodeGUID: 667e4481-4e08-4dbb-9dfb-654b03627076
+    DialogueText: I need help.
+    mood: normal
+    Position: {x: 1354, y: -793}
+  - NodeGUID: 81738ae2-0db0-4337-8bb8-86096cc2ebb1
+    DialogueText: Is this a helpline?
+    mood: normal
+    Position: {x: 109, y: -648}
+  - NodeGUID: 0d190038-03ad-4447-870d-a7320c1066c3
+    DialogueText: Hi!
+    mood: normal
+    Position: {x: 74, y: -396}
+  - NodeGUID: 5a7222dd-cbb2-4e32-a216-23fc28675744
+    DialogueText: Hello there?
+    mood: normal
+    Position: {x: 83, y: -437}
+  - NodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
     DialogueText: "I have a problem that prevents me from living normally. \\n I
       was told you can help with her. I have been for a very long time among the
       leaders in our clan. We have very peculiar values \u200B\u200Bin our society.
@@ -86,14 +112,19 @@ MonoBehaviour:
       already bored from the Waaagh! I'm tired of all this, but I don't know how
       to tell the others so that I am not expelled from the clan. "
     mood: angry
-    Position: {x: 836, y: 160}
-  - NodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
-    DialogueText: Is this a helpline?
-    mood: angry
-    Position: {x: 133, y: 331}
-  - NodeGUID: 6cab542b-9bea-4f57-b736-0a75f7a08c33
-    DialogueText: I need help.
-    mood: angry
-    Position: {x: 513, y: 346}
+    Position: {x: 319, y: 435}
   ExposedProperties: []
-  CommentBlockData: []
+  CommentBlockData:
+  - ChildNodes:
+    - 51ee379e-16cc-4683-a9dd-ce2856359940
+    - 359adee4-113c-4abc-b4d8-e9239af3f5cd
+    Position: {x: 5492, y: -339.99994}
+    Title: Ending
+  - ChildNodes:
+    - 59ac6aa6-7039-4bc8-90c2-cc8a92bfdc9d
+    - 667e4481-4e08-4dbb-9dfb-654b03627076
+    - 5a7222dd-cbb2-4e32-a216-23fc28675744
+    - 0d190038-03ad-4447-870d-a7320c1066c3
+    - 81738ae2-0db0-4337-8bb8-86096cc2ebb1
+    Position: {x: 49.000004, y: -850}
+    Title: Start
