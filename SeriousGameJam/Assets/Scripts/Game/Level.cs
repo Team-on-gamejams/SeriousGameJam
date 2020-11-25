@@ -9,6 +9,8 @@ using NaughtyAttributes;
 using Subtegral.DialogueSystem.DataContainers;
 
 public class Level : MonoBehaviour {
+	public Action OnLevelEndEvent;
+
 	[Header("Music"), Space]
 	[SerializeField] AudioClip defaultAmbient;
 	[SerializeField] AudioClip winAmbient;
@@ -34,7 +36,7 @@ public class Level : MonoBehaviour {
 	PatientData currPatient;
 	AudioSource winAmbientAS;
 
-	void Start() {
+	public void StartGame() {
 		dialogSelect.ClearForce();
 		dialogLog.ClearLog();
 
@@ -127,7 +129,7 @@ public class Level : MonoBehaviour {
 					AudioManager.Instance.Play(systemMessageSound);
 					dialogLog.AddToLog(DialogLogUI.LogEntryType.Servise, $"Thank you for playing the demo!", onShowLog: () => {
 						AudioManager.Instance.Play(buttonAppear, buttonAppearVolume);
-						dialogSelect.AddButton("gameover", () => {
+						dialogSelect.AddButton("Restart demo level", () => {
 							currPatientId = 0;
 							dialogLog.ClearLog();
 							dialogSelect.Clear();
@@ -135,6 +137,16 @@ public class Level : MonoBehaviour {
 								AudioManager.Instance.ChangeASVolume(winAmbientAS, 0.0f, 1.0f);
 							AudioManager.Instance.PlayMusic(defaultAmbient);
 							LeanTween.delayedCall(UnityEngine.Random.Range(1.0f, 2.5f), StartNewPatient);
+						});
+
+						dialogSelect.AddButton("To main menu", () => {
+							currPatientId = 0;
+							dialogLog.ClearLog();
+							dialogSelect.Clear();
+							if (winAmbientAS)
+								AudioManager.Instance.ChangeASVolume(winAmbientAS, 0.0f, 1.0f);
+							AudioManager.Instance.PlayMusic(defaultAmbient);
+							OnLevelEndEvent?.Invoke();
 						});
 					});
 				}
