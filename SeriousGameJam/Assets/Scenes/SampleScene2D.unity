@@ -487,6 +487,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ef6a07155780ba4ab42e435a77a41c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogLog: {fileID: 1259861698}
+  dialogSelect: {fileID: 836591695}
+  manual: {fileID: 1615304554}
+  level: {fileID: 1884622450}
 --- !u!4 &241910117
 Transform:
   m_ObjectHideFlags: 0
@@ -3466,10 +3470,10 @@ MonoBehaviour:
   buttonAppear: {fileID: 8300000, guid: 1bbd90ee4ffae5f418ef4d0f0f349d77, type: 3}
   buttonAppearVolume: 0.5
   patients:
+  - {fileID: 11400000, guid: e83e3655495ae8a45b81308114cfdda0, type: 2}
   - {fileID: 11400000, guid: ced0a2679ad09d24499e982c77a09bca, type: 2}
   - {fileID: 11400000, guid: a9e60f230b53ebc40bc42221724085ef, type: 2}
   - {fileID: 11400000, guid: 37d10933da0eb964cb6ab73efb4f0539, type: 2}
-  - {fileID: 11400000, guid: e83e3655495ae8a45b81308114cfdda0, type: 2}
   operatorName: Operator
   dialogLog: {fileID: 1259861698}
   dialogSelect: {fileID: 836591695}
