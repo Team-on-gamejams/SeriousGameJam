@@ -17,32 +17,19 @@ MonoBehaviour:
     PortName: Next
     TargetNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
   - BaseNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
-    PortName: 'Please tell me how long have you been doing your job? '
+    PortName: 'Please tell me how long have you been doing your business? '
     TargetNodeGUID: 6cab542b-9bea-4f57-b736-0a75f7a08c33
   - BaseNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
-    PortName: Tell us in more detail what this activity is?
+    PortName: 'Tell us in more detail what kind of activity it is? '
     TargetNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
-  - BaseNodeGUID: 6cab542b-9bea-4f57-b736-0a75f7a08c33
-    PortName: 'What exactly do you like about this activity? '
-    TargetNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
-  - BaseNodeGUID: 6cab542b-9bea-4f57-b736-0a75f7a08c33
-    PortName: Do you like your activities?
-    TargetNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
   - BaseNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
     PortName: 'What exactly do you like about this activity? '
     TargetNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
   - BaseNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
-    PortName: Do you like your activities?
+    PortName: 'Do you like your activity? '
     TargetNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
-  - BaseNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
-    PortName: 'Why did you think that your work would achieve respect among your
-      colleagues? '
-    TargetNodeGUID: 4f597d6d-820d-48e8-9aab-b8c8d9fd0fca
-  - BaseNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
-    PortName: 'And what exactly is this so-called respect? '
-    TargetNodeGUID: cb4ea37c-f87b-4505-a77e-558591a52739
   - BaseNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
-    PortName: 'And what exactly is this so-called respect? '
+    PortName: And what exactly is this so-called respect?
     TargetNodeGUID: cb4ea37c-f87b-4505-a77e-558591a52739
   - BaseNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
     PortName: 'Why did you think that your work would achieve respect among your
@@ -53,20 +40,33 @@ MonoBehaviour:
       send you the contacts of a psychologist for further consultations.
     TargetNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
   - BaseNodeGUID: cb4ea37c-f87b-4505-a77e-558591a52739
-    PortName: You need to take a vacation and rest, but I persistently recommend
-      thinking about changing activities
+    PortName: ' You need to take a vacation and rest, but I persistently recommend
+      thinking about changing activities'
     TargetNodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
   - BaseNodeGUID: cb4ea37c-f87b-4505-a77e-558591a52739
     PortName: In my opinion, you need to radically change your activities and work
       with a psychologist, then you will no longer be tormented by remorse
     TargetNodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
+  - BaseNodeGUID: 6cab542b-9bea-4f57-b736-0a75f7a08c33
+    PortName: 'What exactly do you like about this activity? '
+    TargetNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
+  - BaseNodeGUID: 6cab542b-9bea-4f57-b736-0a75f7a08c33
+    PortName: 'Do you like your activity? '
+    TargetNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
+  - BaseNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
+    PortName: And what exactly is this so-called respect?
+    TargetNodeGUID: cb4ea37c-f87b-4505-a77e-558591a52739
+  - BaseNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
+    PortName: 'Why did you think that your work would achieve respect among your
+      colleagues? '
+    TargetNodeGUID: 4f597d6d-820d-48e8-9aab-b8c8d9fd0fca
   - BaseNodeGUID: 4f597d6d-820d-48e8-9aab-b8c8d9fd0fca
     PortName: First, you need to be distracted first and foremost. After that I will
       send you the contacts of a psychologist for further consultations.
     TargetNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
   - BaseNodeGUID: 4f597d6d-820d-48e8-9aab-b8c8d9fd0fca
-    PortName: You need to take a vacation and rest, but I persistently recommend
-      thinking about changing activities
+    PortName: ' You need to take a vacation and rest, but I persistently recommend
+      thinking about changing activities'
     TargetNodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
   - BaseNodeGUID: 4f597d6d-820d-48e8-9aab-b8c8d9fd0fca
     PortName: In my opinion, you need to radically change your activities and work
@@ -74,45 +74,44 @@ MonoBehaviour:
     TargetNodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
   DialogueNodeData:
   - NodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
-    DialogueText: Hello, I was recommended to contact you because I have a bit of
-      a delicate problem. \n The fact is that I have experienced burnout due to my
-      professional activities. I need psychological help to get out of a state of
-      self-doubt and return to a normal state.
+    DialogueText: Hello, I was recommended to contact you, I have a little delicate
+      problem. The fact is that I burned out due to my professional activities. I
+      need psychological help to get out of the state of despondency and return to
+      my normal state.
     mood: normal
     Position: {x: 272, y: 174}
-  - NodeGUID: 6cab542b-9bea-4f57-b736-0a75f7a08c33
-    DialogueText: ' It''s been a long time, and I really like it.'
-    mood: normal
-    Position: {x: 1962, y: 42}
   - NodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
     DialogueText: This is a very dubious activity, but I like it
     mood: normal
     Position: {x: 1966, y: 264}
-  - NodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
-    DialogueText: Yes, I really liked it and it gave me pleasure
-    mood: angry
-    Position: {x: 2760, y: 264}
   - NodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
-    DialogueText: "The fact that it brought me pleasure and respect among her \"
-      colleagues\u201D"
+    DialogueText: The fact that she brings me pleasure and respect among her "colleagues"
     mood: normal
     Position: {x: 2730, y: 49}
   - NodeGUID: cb4ea37c-f87b-4505-a77e-558591a52739
     DialogueText: The fact that we compete with each other in the number of trollings
     mood: doubt
     Position: {x: 3529, y: 53}
+  - NodeGUID: 6cab542b-9bea-4f57-b736-0a75f7a08c33
+    DialogueText: For a very long time and I really like it.
+    mood: normal
+    Position: {x: 1962, y: 42}
+  - NodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
+    DialogueText: Yes, I like it very much and brings me pleasure
+    mood: angry
+    Position: {x: 2731, y: 264}
   - NodeGUID: 4f597d6d-820d-48e8-9aab-b8c8d9fd0fca
     DialogueText: Because thanks to this activity, we competed with each other who
       troll more creatures
     mood: doubt
-    Position: {x: 3478, y: 264}
-  - NodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
-    DialogueText: Thank you very much for your help, but I was joking, goodbye!
-    mood: exitno
-    Position: {x: 4638, y: 74}
+    Position: {x: 3556, y: 264}
   - NodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
     DialogueText: Thank you very much for your help, but I was joking, goodbye!
     mood: exitok
-    Position: {x: 4637, y: 276}
+    Position: {x: 4770, y: 299}
+  - NodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
+    DialogueText: Thank you very much for your help, but I was joking, goodbye!
+    mood: exitno
+    Position: {x: 4816, y: 59}
   ExposedProperties: []
   CommentBlockData: []

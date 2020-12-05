@@ -16,77 +16,80 @@ MonoBehaviour:
   - BaseNodeGUID: 8430c174-fdd7-45db-ba92-3d295e4285e7
     PortName: Next
     TargetNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
-  - BaseNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
-    PortName: 'The next time you need to yell at someone just restrain yourself and
-      respond as you see fit.\n In doing so, be as confident as ever. '
-    TargetNodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
-  - BaseNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
-    PortName: Hope that my help was usefull
-    TargetNodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
-  - BaseNodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
-    PortName: Hope that my help was usefull
-    TargetNodeGUID: 359adee4-113c-4abc-b4d8-e9239af3f5cd
-  - BaseNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
-    PortName: You don't have to be afraid, it is very important to be yourself.
-    TargetNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
-  - BaseNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
-    PortName: Try to confess everything, honesty is the best policy.
-    TargetNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
-  - BaseNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
-    PortName: 'When communicating with others, try to gradually introduce preferred
-      manner of communication. '
-    TargetNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
-  - BaseNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
-    PortName: Do you have close friends, relatives who already know about this?
-    TargetNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
-  - BaseNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
-    PortName: Try to confess everything, honesty is the best policy.
-    TargetNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
-  - BaseNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
-    PortName: 'When communicating with others, try to gradually introduce preferred
-      manner of communication. '
-    TargetNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
   - BaseNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
     PortName: Yes, how can I help you?
     TargetNodeGUID: 6cab542b-9bea-4f57-b736-0a75f7a08c33
   - BaseNodeGUID: 6cab542b-9bea-4f57-b736-0a75f7a08c33
     PortName: What happened?
     TargetNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
+  - BaseNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
+    PortName: You don't have to be afraid, it is very important to be yourself.
+    TargetNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
+  - BaseNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
+    PortName: 'Have you thought about stopping using force on them? '
+    TargetNodeGUID: f676fc04-728f-43fa-a609-0c4724d945c8
+  - BaseNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
+    PortName: 'Do you have close friends or relatives who already know about it? '
+    TargetNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
+  - BaseNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
+    PortName: 'What is your clan relationship with your subordinates and how do they
+      relate to you? '
+    TargetNodeGUID: 4e9f9ff0-e805-4e14-a8cb-b9b4e5320d22
+  - BaseNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
+    PortName: Try to talk to your clan and explain the situation to them.
+    TargetNodeGUID: f11fc4e7-b23d-49ea-aa2a-ddda3cf8fbfb
+  - BaseNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
+    PortName: 'Try to admit everything, honesty is the best policy. '
+    TargetNodeGUID: e3d8f0b5-32f4-4293-bbc9-4c34b1e38191
+  - BaseNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
+    PortName: When communicating with the clan, try to use force against them only
+      if absolutely necessary
+    TargetNodeGUID: d20f320f-f53f-461e-8246-5c67c4018cd6
+  - BaseNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
+    PortName: 'When communicating with others, try gradually introducing your preferred
+      communication style. '
+    TargetNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
+  - BaseNodeGUID: 4e9f9ff0-e805-4e14-a8cb-b9b4e5320d22
+    PortName: You don't have to be afraid, it is very important to be yourself.
+    TargetNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
+  - BaseNodeGUID: 4e9f9ff0-e805-4e14-a8cb-b9b4e5320d22
+    PortName: 'Have you thought about stopping using force on them? '
+    TargetNodeGUID: f676fc04-728f-43fa-a609-0c4724d945c8
+  - BaseNodeGUID: e3d8f0b5-32f4-4293-bbc9-4c34b1e38191
+    PortName: Hope that my help was usefull
+    TargetNodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
+  - BaseNodeGUID: f11fc4e7-b23d-49ea-aa2a-ddda3cf8fbfb
+    PortName: Hope that my help was usefull
+    TargetNodeGUID: 7f186194-f7f0-4657-865f-77d5979cae90
+  - BaseNodeGUID: f676fc04-728f-43fa-a609-0c4724d945c8
+    PortName: Hope that my help was usefull
+    TargetNodeGUID: f0ec8ed5-fdd1-4c24-9d1b-6b1228d2980b
+  - BaseNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
+    PortName: Hope that my help was usefull
+    TargetNodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
+  - BaseNodeGUID: 5a1455cb-862d-4caa-9461-b663e92c10c9
+    PortName: Hope that my help was usefull
+    TargetNodeGUID: 359adee4-113c-4abc-b4d8-e9239af3f5cd
+  - BaseNodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
+    PortName: Hope that my help was usefull
+    TargetNodeGUID: 359adee4-113c-4abc-b4d8-e9239af3f5cd
+  - BaseNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
+    PortName: 'The next time you need to yell at someone,just restrain yourself and
+      respond as you see fit. In doing so, be as confident as ever. '
+    TargetNodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
+  - BaseNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
+    PortName: These are cases when there is no need to resort to violence and it
+      is enough to talk, for example, to condemn wrong actions or to publicly shame
+    TargetNodeGUID: 5a1455cb-862d-4caa-9461-b663e92c10c9
+  - BaseNodeGUID: d20f320f-f53f-461e-8246-5c67c4018cd6
+    PortName: These are cases when there is no need to resort to violence and it
+      is enough to talk, for example, to condemn wrong actions or to publicly shame
+    TargetNodeGUID: 5a1455cb-862d-4caa-9461-b663e92c10c9
+  - BaseNodeGUID: d20f320f-f53f-461e-8246-5c67c4018cd6
+    PortName: 'The next time you need to yell at someone,just restrain yourself and
+      respond as you see fit. In doing so, be as confident as ever. '
+    TargetNodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
   DialogueNodeData:
-  - NodeGUID: 359adee4-113c-4abc-b4d8-e9239af3f5cd
-    DialogueText: <b>Orc is happy</b>
-    mood: exitok
-    Position: {x: 6135, y: 246}
-  - NodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
-    DialogueText: 'How''s that? '
-    mood: normal
-    Position: {x: 4589, y: 248}
-  - NodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
-    DialogueText: YES! You're right. I will do so.
-    mood: normal
-    Position: {x: 4900, y: -264}
-  - NodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
-    DialogueText: <b>Orc was expelled from the clan</b>
-    mood: exitno
-    Position: {x: 5635, y: -263}
-  - NodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
-    DialogueText: Oh, I didn't think about that. I'll try.
-    mood: normal
-    Position: {x: 5632, y: 249}
-  - NodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
-    DialogueText: No, I'm afraid to admit, I will be considered weak.
-    mood: no
-    Position: {x: 3785, y: -282}
-  - NodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
-    DialogueText: "I have a problem that prevents me from living normally. \\n I
-      was told you can help with it. I have been for a very long time among the leaders
-      in our clan. We have very peculiar values \u200B\u200Bin our society. The people
-      understand only the language of brute force and do not tolerate weakness.\\n
-      I have to constantly shout at them, and sometimes even beat them.Im already
-      bored from the Waaagh! I'm tired of all this, but I don't know how to tell
-      the others so that I am not expelled from the clan. "
-    mood: angry
-    Position: {x: 836, y: 160}
   - NodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
     DialogueText: Is this a helpline?
     mood: angry
@@ -95,5 +98,72 @@ MonoBehaviour:
     DialogueText: I need help.
     mood: angry
     Position: {x: 513, y: 346}
+  - NodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
+    DialogueText: 'No, I''m afraid to admit that I''ll be considered weak. '
+    mood: no
+    Position: {x: 3837, y: -312}
+  - NodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
+    DialogueText: I have a problem that prevents me from living normally and I was
+      told you can help with it. I have been among the leaders of our clan for a
+      long time. We have very peculiar values in our society. Orcs only understand
+      the language of brute force and do not tolerate weakness. I have to constantly
+      shout at them, and sometimes even beat them. I'm tired of all this, but I don't
+      know how to tell the others, because they exclude me from the clan.
+    mood: angry
+    Position: {x: 836, y: 160}
+  - NodeGUID: 4e9f9ff0-e805-4e14-a8cb-b9b4e5320d22
+    DialogueText: All the orcs in my clan respect me because I'm a big boss, but
+      I don't like using force on them all the time
+    mood: no
+    Position: {x: 3818, y: -44}
+  - NodeGUID: 359adee4-113c-4abc-b4d8-e9239af3f5cd
+    DialogueText: <b>Orc is happy</b>
+    mood: exitok
+    Position: {x: 6155, y: 540}
+  - NodeGUID: f0ec8ed5-fdd1-4c24-9d1b-6b1228d2980b
+    DialogueText: <b>Orcs scatter in search of a new clan and boss</b>
+    mood: exitno
+    Position: {x: 5907, y: -38}
+  - NodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
+    DialogueText: <b>Orc was expelled from the clan</b>
+    mood: exitno
+    Position: {x: 5893, y: -258}
+  - NodeGUID: f676fc04-728f-43fa-a609-0c4724d945c8
+    DialogueText: Yes, but after that I will not be able to control them
+    mood: normal
+    Position: {x: 5213, y: -47}
+  - NodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
+    DialogueText: YES! You're right. I will do so.
+    mood: normal
+    Position: {x: 5290, y: -255}
+  - NodeGUID: 5a1455cb-862d-4caa-9461-b663e92c10c9
+    DialogueText: Okay, I'll try
+    mood: normal
+    Position: {x: 5317, y: 690}
+  - NodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
+    DialogueText: 'How''s that? '
+    mood: normal
+    Position: {x: 3807, y: 450}
+  - NodeGUID: d20f320f-f53f-461e-8246-5c67c4018cd6
+    DialogueText: For example ?!
+    mood: normal
+    Position: {x: 3791, y: 705}
+  - NodeGUID: 7f186194-f7f0-4657-865f-77d5979cae90
+    DialogueText: <b>Orks will consider this a weakness and stop listening to their
+      boss</b>
+    mood: exitno
+    Position: {x: 5901, y: 172}
+  - NodeGUID: f11fc4e7-b23d-49ea-aa2a-ddda3cf8fbfb
+    DialogueText: Okay, I'll try
+    mood: normal
+    Position: {x: 5256, y: 144}
+  - NodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
+    DialogueText: Oh, I didn't think about that. I'll try.
+    mood: normal
+    Position: {x: 5270, y: 477}
+  - NodeGUID: e3d8f0b5-32f4-4293-bbc9-4c34b1e38191
+    DialogueText: Okay, I'll try
+    mood: normal
+    Position: {x: 5256, y: 297}
   ExposedProperties: []
   CommentBlockData: []

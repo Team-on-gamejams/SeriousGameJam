@@ -16,75 +16,220 @@ MonoBehaviour:
   - BaseNodeGUID: 8430c174-fdd7-45db-ba92-3d295e4285e7
     PortName: Next
     TargetNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
-  - BaseNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
-    PortName: Please continue.
-    TargetNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
-  - BaseNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
-    PortName: Your problem is somewhat connected to school?
-    TargetNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
   - BaseNodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
     PortName: Yes, how can I help you?
     TargetNodeGUID: 6cab542b-9bea-4f57-b736-0a75f7a08c33
   - BaseNodeGUID: 6cab542b-9bea-4f57-b736-0a75f7a08c33
-    PortName: What happened?
-    TargetNodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
-  - BaseNodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
-    PortName: Do you have any friends? Maybe tell something about them
-    TargetNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
-  - BaseNodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
-    PortName: Hope that my help was usefull
-    TargetNodeGUID: 359adee4-113c-4abc-b4d8-e9239af3f5cd
-  - BaseNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
-    PortName: You need to analyze the behavior of your friends. And it will become
-      obvious to You that they only use You and make fun of You.Not giving anything
-      in return
-    TargetNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
-  - BaseNodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
-    PortName: You just need to help them and they will help you
-    TargetNodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
+    PortName: If you don't mind I will ask some questions to better understand the
+      situation.
+    TargetNodeGUID: 2a79edaa-32e2-49c9-b9de-b85e273ee483
+  - BaseNodeGUID: 2a79edaa-32e2-49c9-b9de-b85e273ee483
+    PortName: 'Tell me about yourself. '
+    TargetNodeGUID: bff6cf70-08c9-4124-babb-aa326ba6c994
+  - BaseNodeGUID: 2a79edaa-32e2-49c9-b9de-b85e273ee483
+    PortName: Maybe you have some problem with the school system?
+    TargetNodeGUID: 8d21586c-cb79-4949-a381-dfa21b0e4798
+  - BaseNodeGUID: 2a79edaa-32e2-49c9-b9de-b85e273ee483
+    PortName: What can you say about your friends?
+    TargetNodeGUID: b9f05611-6544-4d1d-ab0c-bc78051d6209
+  - BaseNodeGUID: 2a79edaa-32e2-49c9-b9de-b85e273ee483
+    PortName: How do you feel?
+    TargetNodeGUID: caaf4a76-c909-4906-9338-6a7a3d0458da
+  - BaseNodeGUID: 2a79edaa-32e2-49c9-b9de-b85e273ee483
+    PortName: What do you think about a lot? Maybe you dream?
+    TargetNodeGUID: 924d63dd-c171-4bfa-b931-96a02f3e1f8e
   - BaseNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
     PortName: Hope that my help was usefull
     TargetNodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
+  - BaseNodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
+    PortName: Hope that my help was usefull
+    TargetNodeGUID: 359adee4-113c-4abc-b4d8-e9239af3f5cd
+  - BaseNodeGUID: 2961b70b-4339-4b8a-816e-91a3088d6130
+    PortName: You can try to find new friends.Never be afraid to make new friends.If
+      you change the environment it will be easier and more interesting to communicate
+      with them
+    TargetNodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
+  - BaseNodeGUID: 2961b70b-4339-4b8a-816e-91a3088d6130
+    PortName: You need to analyze the behavior of your friends. And it will become
+      obvious to You that they only use You and make fun of You.Not giving anything
+      in return
+    TargetNodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
+  - BaseNodeGUID: 2961b70b-4339-4b8a-816e-91a3088d6130
+    PortName: You just need to help them and they will help you
+    TargetNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
+  - BaseNodeGUID: 2961b70b-4339-4b8a-816e-91a3088d6130
+    PortName: You need to focus on yourself and your work.You can be self-sufficient
+    TargetNodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
+  - BaseNodeGUID: 8b4a6c8e-6fdd-425f-bea2-70246ba7033b
+    PortName: Your problem is somewhat connected to school?
+    TargetNodeGUID: 2961b70b-4339-4b8a-816e-91a3088d6130
+  - BaseNodeGUID: 6237a936-1877-41b0-98d0-c6200c649c2d
+    PortName: Your problem is somewhat connected to school?
+    TargetNodeGUID: 2961b70b-4339-4b8a-816e-91a3088d6130
+  - BaseNodeGUID: 32e7539b-bb74-4acd-b268-bf067231b555
+    PortName: Your problem is somewhat connected to school?
+    TargetNodeGUID: 2961b70b-4339-4b8a-816e-91a3088d6130
+  - BaseNodeGUID: 759f0f41-eedc-4c3b-9648-4c4b4805c666
+    PortName: Your problem is somewhat connected to school?
+    TargetNodeGUID: 2961b70b-4339-4b8a-816e-91a3088d6130
+  - BaseNodeGUID: 2d14a7ca-2503-4e10-b1e3-74f192a869e1
+    PortName: Your problem is somewhat connected to school?
+    TargetNodeGUID: 2961b70b-4339-4b8a-816e-91a3088d6130
+  - BaseNodeGUID: bff6cf70-08c9-4124-babb-aa326ba6c994
+    PortName: Your problem is somewhat connected to school?
+    TargetNodeGUID: 2961b70b-4339-4b8a-816e-91a3088d6130
+  - BaseNodeGUID: 8d21586c-cb79-4949-a381-dfa21b0e4798
+    PortName: Your problem is somewhat connected to school?
+    TargetNodeGUID: 2961b70b-4339-4b8a-816e-91a3088d6130
+  - BaseNodeGUID: b9f05611-6544-4d1d-ab0c-bc78051d6209
+    PortName: Your problem is somewhat connected to school?
+    TargetNodeGUID: 2961b70b-4339-4b8a-816e-91a3088d6130
+  - BaseNodeGUID: caaf4a76-c909-4906-9338-6a7a3d0458da
+    PortName: Your problem is somewhat connected to school?
+    TargetNodeGUID: 2961b70b-4339-4b8a-816e-91a3088d6130
+  - BaseNodeGUID: 924d63dd-c171-4bfa-b931-96a02f3e1f8e
+    PortName: Your problem is somewhat connected to school?
+    TargetNodeGUID: 2961b70b-4339-4b8a-816e-91a3088d6130
+  - BaseNodeGUID: 8d21586c-cb79-4949-a381-dfa21b0e4798
+    PortName: 'Tell me about yourself. '
+    TargetNodeGUID: 8b4a6c8e-6fdd-425f-bea2-70246ba7033b
+  - BaseNodeGUID: b9f05611-6544-4d1d-ab0c-bc78051d6209
+    PortName: 'Tell me about yourself. '
+    TargetNodeGUID: 8b4a6c8e-6fdd-425f-bea2-70246ba7033b
+  - BaseNodeGUID: 924d63dd-c171-4bfa-b931-96a02f3e1f8e
+    PortName: 'Tell me about yourself. '
+    TargetNodeGUID: 8b4a6c8e-6fdd-425f-bea2-70246ba7033b
+  - BaseNodeGUID: caaf4a76-c909-4906-9338-6a7a3d0458da
+    PortName: 'Tell me about yourself. '
+    TargetNodeGUID: 8b4a6c8e-6fdd-425f-bea2-70246ba7033b
+  - BaseNodeGUID: bff6cf70-08c9-4124-babb-aa326ba6c994
+    PortName: Maybe you have some problem with the school system?
+    TargetNodeGUID: 6237a936-1877-41b0-98d0-c6200c649c2d
+  - BaseNodeGUID: b9f05611-6544-4d1d-ab0c-bc78051d6209
+    PortName: Maybe you have some problem with the school system?
+    TargetNodeGUID: 6237a936-1877-41b0-98d0-c6200c649c2d
+  - BaseNodeGUID: caaf4a76-c909-4906-9338-6a7a3d0458da
+    PortName: Maybe you have some problem with the school system?
+    TargetNodeGUID: 6237a936-1877-41b0-98d0-c6200c649c2d
+  - BaseNodeGUID: 924d63dd-c171-4bfa-b931-96a02f3e1f8e
+    PortName: Maybe you have some problem with the school system?
+    TargetNodeGUID: 6237a936-1877-41b0-98d0-c6200c649c2d
+  - BaseNodeGUID: bff6cf70-08c9-4124-babb-aa326ba6c994
+    PortName: What can you say about your friends?
+    TargetNodeGUID: 32e7539b-bb74-4acd-b268-bf067231b555
+  - BaseNodeGUID: 8d21586c-cb79-4949-a381-dfa21b0e4798
+    PortName: What can you say about your friends?
+    TargetNodeGUID: 32e7539b-bb74-4acd-b268-bf067231b555
+  - BaseNodeGUID: caaf4a76-c909-4906-9338-6a7a3d0458da
+    PortName: What can you say about your friends?
+    TargetNodeGUID: 32e7539b-bb74-4acd-b268-bf067231b555
+  - BaseNodeGUID: 924d63dd-c171-4bfa-b931-96a02f3e1f8e
+    PortName: What can you say about your friends?
+    TargetNodeGUID: 32e7539b-bb74-4acd-b268-bf067231b555
+  - BaseNodeGUID: bff6cf70-08c9-4124-babb-aa326ba6c994
+    PortName: How do you feel?
+    TargetNodeGUID: 759f0f41-eedc-4c3b-9648-4c4b4805c666
+  - BaseNodeGUID: 8d21586c-cb79-4949-a381-dfa21b0e4798
+    PortName: How do you feel?
+    TargetNodeGUID: 759f0f41-eedc-4c3b-9648-4c4b4805c666
+  - BaseNodeGUID: b9f05611-6544-4d1d-ab0c-bc78051d6209
+    PortName: How do you feel?
+    TargetNodeGUID: 759f0f41-eedc-4c3b-9648-4c4b4805c666
+  - BaseNodeGUID: 924d63dd-c171-4bfa-b931-96a02f3e1f8e
+    PortName: How do you feel?
+    TargetNodeGUID: 759f0f41-eedc-4c3b-9648-4c4b4805c666
+  - BaseNodeGUID: caaf4a76-c909-4906-9338-6a7a3d0458da
+    PortName: What do you think about a lot? Maybe you dream?
+    TargetNodeGUID: 2d14a7ca-2503-4e10-b1e3-74f192a869e1
+  - BaseNodeGUID: b9f05611-6544-4d1d-ab0c-bc78051d6209
+    PortName: What do you think about a lot? Maybe you dream?
+    TargetNodeGUID: 2d14a7ca-2503-4e10-b1e3-74f192a869e1
+  - BaseNodeGUID: 8d21586c-cb79-4949-a381-dfa21b0e4798
+    PortName: What do you think about a lot? Maybe you dream?
+    TargetNodeGUID: 2d14a7ca-2503-4e10-b1e3-74f192a869e1
+  - BaseNodeGUID: bff6cf70-08c9-4124-babb-aa326ba6c994
+    PortName: What do you think about a lot? Maybe you dream?
+    TargetNodeGUID: 2d14a7ca-2503-4e10-b1e3-74f192a869e1
   DialogueNodeData:
   - NodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
     DialogueText: Is this a helpline?
     mood: doubt
     Position: {x: 133, y: 331}
   - NodeGUID: 6cab542b-9bea-4f57-b736-0a75f7a08c33
-    DialogueText: I need help.
+    DialogueText: I have problems with school.
     mood: normal
     Position: {x: 513, y: 346}
-  - NodeGUID: 85485244-5ac4-45c1-98c1-1da8bc5d1abf
-    DialogueText: Well it all began from elementary school.At that point i knew i'll
-      be an engineer.I never liked anything that my peers liked and I was not too
-      talkative.And my nose is too big even for the goblins standards.And i don't
-      know why but i feel that something is wrong.
+  - NodeGUID: 2a79edaa-32e2-49c9-b9de-b85e273ee483
+    DialogueText: Sure
     mood: normal
-    Position: {x: 1770, y: 151}
-  - NodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
-    DialogueText: <b>Actially it doen't help at all</b>
-    mood: exitno
-    Position: {x: 4821, y: 134}
-  - NodeGUID: 359adee4-113c-4abc-b4d8-e9239af3f5cd
-    DialogueText: <b>Sure, it helps me a lot</b>
-    mood: exitok
-    Position: {x: 4850, y: 447}
-  - NodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
-    DialogueText: Thanks for the advice I will try.
+    Position: {x: 1340, y: 391}
+  - NodeGUID: b9f05611-6544-4d1d-ab0c-bc78051d6209
+    DialogueText: I would like to communicate more with them.
     mood: normal
-    Position: {x: 4337, y: 465}
-  - NodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
-    DialogueText: Thanks for the advice I will try.
+    Position: {x: 2340, y: 830}
+  - NodeGUID: caaf4a76-c909-4906-9338-6a7a3d0458da
+    DialogueText: 'Just sad I think. '
     mood: normal
-    Position: {x: 4293, y: 111}
-  - NodeGUID: 2e2e37c8-f899-489f-a97c-3ec082dc870a
+    Position: {x: 2408, y: 1077}
+  - NodeGUID: 924d63dd-c171-4bfa-b931-96a02f3e1f8e
+    DialogueText: 'I''m thinking about my projects now. For example, a device that
+      creates images on different surfaces '
+    mood: normal
+    Position: {x: 2197, y: 1296}
+  - NodeGUID: 8d21586c-cb79-4949-a381-dfa21b0e4798
+    DialogueText: No, I always got the highest score in the class.
+    mood: normal
+    Position: {x: 2353, y: 616}
+  - NodeGUID: 2d14a7ca-2503-4e10-b1e3-74f192a869e1
+    DialogueText: 'I''m thinking about my projects now. For example, a device that
+      creates images on different surfaces '
+    mood: normal
+    Position: {x: 3421, y: 1394}
+  - NodeGUID: 32e7539b-bb74-4acd-b268-bf067231b555
+    DialogueText: I would like to communicate more with them.
+    mood: normal
+    Position: {x: 3549, y: 908}
+  - NodeGUID: 6237a936-1877-41b0-98d0-c6200c649c2d
+    DialogueText: No, I always got the highest score in the class.
+    mood: normal
+    Position: {x: 3576, y: 713}
+  - NodeGUID: 8b4a6c8e-6fdd-425f-bea2-70246ba7033b
     DialogueText: I am goblin.My name is Grim Brimdal but others call me Grim Bin.I
       am studying in grade 10 in school for Orcs and Goblins.
     mood: normal
-    Position: {x: 835, y: 160}
-  - NodeGUID: 44212ce2-c491-4a32-a356-cc614a0d8166
-    DialogueText: I mostly work with friends on their school work.
-    mood: doubt
-    Position: {x: 3117, y: 277}
+    Position: {x: 3430, y: 442}
+  - NodeGUID: 759f0f41-eedc-4c3b-9648-4c4b4805c666
+    DialogueText: 'Just sad I think. '
+    mood: normal
+    Position: {x: 3541, y: 1132}
+  - NodeGUID: 2961b70b-4339-4b8a-816e-91a3088d6130
+    DialogueText: Well it all began from elementary school.At that point i knew i'll
+      be an engineer.I never liked anything that my peers liked and I was not too
+      talkative.And my nose is too big even for the goblins standards.And i don't
+      know why but i feel that something is wrong.My friends only appear when they
+      need my help.
+    mood: normal
+    Position: {x: 4548, y: 838}
+  - NodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
+    DialogueText: <b>Actially it doen't help at all</b>
+    mood: exitno
+    Position: {x: 7638, y: 652}
+  - NodeGUID: 359adee4-113c-4abc-b4d8-e9239af3f5cd
+    DialogueText: <b>Sure, it helps me a lot</b>
+    mood: exitok
+    Position: {x: 7667, y: 965}
+  - NodeGUID: 2340313e-9768-4982-afb1-2a019da0f4e0
+    DialogueText: Thanks for the advice I will try.
+    mood: normal
+    Position: {x: 7110, y: 629}
+  - NodeGUID: 40c462de-0cad-4fe2-8a79-67ac4c66c714
+    DialogueText: Thanks for the advice I will try.
+    mood: normal
+    Position: {x: 7055, y: 963}
+  - NodeGUID: bff6cf70-08c9-4124-babb-aa326ba6c994
+    DialogueText: I am goblin.My name is Grim Brimdal but others call me Grim Bin.I
+      am studying in grade 10 in school for Orcs and Goblins.
+    mood: normal
+    Position: {x: 2124, y: 273}
   ExposedProperties: []
   CommentBlockData: []

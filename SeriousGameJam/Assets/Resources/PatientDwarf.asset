@@ -36,6 +36,9 @@ MonoBehaviour:
   - BaseNodeGUID: a96bc056-4af8-461e-9965-44eed1a30092
     PortName: Hope that my help was usefull
     TargetNodeGUID: 359adee4-113c-4abc-b4d8-e9239af3f5cd
+  - BaseNodeGUID: 9e7cf8ba-17a5-4585-b1d9-bc00316a3b8b
+    PortName: Hope that my help was usefull
+    TargetNodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
   - BaseNodeGUID: b2dbc0e2-c8ef-4c34-b5b6-c0fe76edbcad
     PortName: Do not belittle your dignity, just say something witty in return and
       try not to offend anyone.
@@ -44,9 +47,6 @@ MonoBehaviour:
     PortName: You don't have to laugh at yourself. Respond to the bullies in the
       same way, laugh at their shortcomings in return.
     TargetNodeGUID: 9e7cf8ba-17a5-4585-b1d9-bc00316a3b8b
-  - BaseNodeGUID: 9e7cf8ba-17a5-4585-b1d9-bc00316a3b8b
-    PortName: Hope that my help was usefull
-    TargetNodeGUID: 51ee379e-16cc-4683-a9dd-ce2856359940
   DialogueNodeData:
   - NodeGUID: 763684af-58f0-44d4-8f77-54a9fc5e6c1d
     DialogueText: 'Hello, I found your contacts in a newspaper article.\n The thing
@@ -60,8 +60,8 @@ MonoBehaviour:
     DialogueText: 'Usually they just shout after me something insulting about my
       height. Sometimes they say to your face ... that I am TINY! And then they laugh
       for a long time. It''s unbearable.\n I tried to fight back and even explained
-      to them that I am very high among my people, but they just don''t listen to
-      me, they just keep laughing. '
+      to them that I was very high among the dwarves, but they just don''t listen
+      to me, they just keep laughing. '
     mood: angry
     Position: {x: 2669, y: 176}
   - NodeGUID: a96bc056-4af8-461e-9965-44eed1a30092
