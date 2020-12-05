@@ -71,6 +71,7 @@ public class DialogSelectButton : MonoBehaviour {
 
 	public void Hide() {
 		anim.Play("Hide");
+		btn.onClick.RemoveAllListeners();
 	}
 
 	public void OnHideAnimEnd() {

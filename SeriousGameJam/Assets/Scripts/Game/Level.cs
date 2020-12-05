@@ -139,15 +139,15 @@ public class Level : MonoBehaviour {
 							LeanTween.delayedCall(UnityEngine.Random.Range(1.0f, 2.5f), StartNewPatient);
 						});
 
-						dialogSelect.AddButton("To main menu", () => {
-							currPatientId = 0;
-							dialogLog.ClearLog();
-							dialogSelect.Clear();
-							if (winAmbientAS)
-								AudioManager.Instance.ChangeASVolume(winAmbientAS, 0.0f, 1.0f);
-							AudioManager.Instance.PlayMusic(defaultAmbient);
-							OnLevelEndEvent?.Invoke();
-						});
+						//dialogSelect.AddButton("To main menu", () => {
+						//	currPatientId = 0;
+						//	dialogLog.ClearLog();
+						//	dialogSelect.Clear();
+						//	if (winAmbientAS)
+						//		AudioManager.Instance.ChangeASVolume(winAmbientAS, 0.0f, 1.0f);
+						//	AudioManager.Instance.PlayMusic(defaultAmbient);
+						//	OnLevelEndEvent?.Invoke();
+						//});
 					});
 				}
 				else {
